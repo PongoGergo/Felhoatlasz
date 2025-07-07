@@ -72,8 +72,8 @@
                 </p>
               </div>
               <form
-                method="post"
-                action="/eduka/assets/php/contact.php"
+                [formGroup]="contactForm"
+                (ngSubmit)="sendEmail()"
                 id="contact-form"
               >
                 <div class="row">
@@ -83,7 +83,8 @@
                         type="text"
                         class="form-control"
                         name="name"
-                        placeholder="Your Name"
+                        formControlName="from_name"
+                        placeholder="Az ön neve"
                         required
                       />
                     </div>
@@ -93,8 +94,9 @@
                       <input
                         type="email"
                         class="form-control"
+                        formControlName="from_email"
                         name="email"
-                        placeholder="Your Email"
+                        placeholder="Az ön e-mail címe"
                         required
                       />
                     </div>
@@ -105,21 +107,27 @@
                     type="text"
                     class="form-control"
                     name="subject"
-                    placeholder="Your Subject"
+                    formControlName="subject"
+                    placeholder="Tárgy"
                     required
                   />
                 </div>
                 <div class="form-group">
                   <textarea
                     name="message"
+                    formControlName="message"
                     cols="30"
                     rows="5"
                     class="form-control"
-                    placeholder="Write Your Message"
+                    placeholder="Adja meg az üzenetet"
                   ></textarea>
                 </div>
-                <button type="submit" class="theme-btn">
-                  Send Message <i class="far fa-paper-plane"></i>
+                <button
+                  type="submit"
+                  class="theme-btn"
+                  [disabled]="contactForm.invalid"
+                >
+                  Küldés <i class="far fa-paper-plane"></i>
                 </button>
                 <div class="col-md-12 mt-3">
                   <div class="form-messege text-success"></div>
@@ -136,7 +144,7 @@
   <!-- map -->
   <div class="contact-map">
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96708.34194156103!2d-74.03927096447748!3d40.759040329405195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a01c8df6fb3cb8!2sSolomon%20R.%20Guggenheim%20Museum!5e0!3m2!1sen!2sbd!4v1619410634508!5m2!1sen!2s"
+      src="https://www.google.com/maps/place/Budapest,+Práter+u.+29%2FA,+1082/@47.4866281,19.0750491,17z/data=!3m1!4b1!4m6!3m5!1s0x4741dcf7baeec677:0xc27ae5309f65917b!8m2!3d47.4866281!4d19.0750491!16s%2Fg%2F11m6qxwjrp?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
       style="border: 0"
       allowfullscreen=""
       loading="lazy"
