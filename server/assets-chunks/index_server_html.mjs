@@ -3,7 +3,7 @@ export default `<!DOCTYPE html>
   <head>
     <meta charset="utf-8"/>
     <title>Felhőatlasz</title>
-    <base href="/"/>
+    <base href="/Felhoatlasz/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png"/>
   <link rel="stylesheet" href="styles-EBTESGBP.css"></head>

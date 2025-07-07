@@ -2,73 +2,73 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: '/',
+  baseHref: '/Felhoatlasz/',
   locale: undefined,
   routes: [
   {
     "renderMode": 2,
-    "route": "/"
+    "route": "/Felhoatlasz"
   },
   {
     "renderMode": 2,
-    "route": "/about"
+    "route": "/Felhoatlasz/about"
   },
   {
     "renderMode": 2,
-    "route": "/contact"
+    "route": "/Felhoatlasz/contact"
   },
   {
     "renderMode": 2,
-    "route": "/documents"
+    "route": "/Felhoatlasz/documents"
   },
   {
     "renderMode": 2,
-    "route": "/faq"
+    "route": "/Felhoatlasz/faq"
   },
   {
     "renderMode": 2,
-    "route": "/carrier"
+    "route": "/Felhoatlasz/carrier"
   },
   {
     "renderMode": 2,
-    "route": "/szamvitel"
+    "route": "/Felhoatlasz/szamvitel"
   },
   {
     "renderMode": 2,
-    "route": "/konyveles"
+    "route": "/Felhoatlasz/konyveles"
   },
   {
     "renderMode": 2,
-    "route": "/konyvvizsgalat"
+    "route": "/Felhoatlasz/konyvvizsgalat"
   },
   {
     "renderMode": 2,
-    "route": "/adotanacsadas"
+    "route": "/Felhoatlasz/adotanacsadas"
   },
   {
     "renderMode": 2,
-    "route": "/penzugyi"
+    "route": "/Felhoatlasz/penzugyi"
   },
   {
     "renderMode": 2,
-    "route": "/**"
+    "route": "/Felhoatlasz/**"
   }
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 97604, hash: '67dc5e7c07e882ea46e6431b07bb604f1c6c1d159822b1f1a9efbb4703e94d06', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 1101, hash: '84a8f256c4a3e5be69474b18c51d3941ac19dbe4fee5fde72dd81a9c10b18ac8', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'faq/index.html': {size: 148340, hash: 'c5018cf8d4888a708159a43d50fc8d483cf1856c37ece99e0a525c2ba30a2a58', text: () => import('./assets-chunks/faq_index_html.mjs').then(m => m.default)},
-    'about/index.html': {size: 155984, hash: 'bb643e591efd5f193a3a3cc77b74ba9b867ac1b436b8fdc00e0db68ed5b54e1c', text: () => import('./assets-chunks/about_index_html.mjs').then(m => m.default)},
-    'index.html': {size: 173514, hash: '7c493b2cb7e7c31110df8138f56c0c3dfc0d37cf634a2da038b5cbd538ff994b', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'konyveles/index.html': {size: 155528, hash: 'ff660400a9cc2f0840e87ce367f4f1d92e3bf7f7b1958338bd89fcdcfa784b15', text: () => import('./assets-chunks/konyveles_index_html.mjs').then(m => m.default)},
-    'adotanacsadas/index.html': {size: 155537, hash: '9a115a7342066374a406a5da771052f898edd28478c167b633005e22bca576fc', text: () => import('./assets-chunks/adotanacsadas_index_html.mjs').then(m => m.default)},
-    'contact/index.html': {size: 142311, hash: '9ce499646a1eb6b9194f3a2f97af63a47690b88083d79e5956b92c6c457cf5f3', text: () => import('./assets-chunks/contact_index_html.mjs').then(m => m.default)},
-    'carrier/index.html': {size: 144764, hash: '96d8b219bc6ab19582be7376885bb59457ca8f3a39e30b648aca9bfeef1ddafb', text: () => import('./assets-chunks/carrier_index_html.mjs').then(m => m.default)},
-    'konyvvizsgalat/index.html': {size: 155539, hash: '49814f6d20cf817fada41ad915daef2ee333de90d5a2477c5e05b17fb8aec72e', text: () => import('./assets-chunks/konyvvizsgalat_index_html.mjs').then(m => m.default)},
-    'documents/index.html': {size: 142347, hash: '02293bfeef5ac1a07bdf58daf5352004896266b320d182a67985dc560e51a3ad', text: () => import('./assets-chunks/documents_index_html.mjs').then(m => m.default)},
-    'penzugyi/index.html': {size: 155527, hash: '2fe76500e3dcc5b9ece8988f8ff052bf453e245ed213b08f7496b285afde5812', text: () => import('./assets-chunks/penzugyi_index_html.mjs').then(m => m.default)},
-    'szamvitel/index.html': {size: 142479, hash: 'ec5480ca0282ead8fdc53cbc0c16d00a6f2c63063e5915365fa09fb15d85b4d9', text: () => import('./assets-chunks/szamvitel_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 97616, hash: 'a6ece89d5f356956d447b097fe18e20a27643478a469a7e2208bbdf1a7d90f95', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 1113, hash: 'b4e497017f7a882b2b38c0d0b8b763403dfa75b3b9168a612c447aa4c50498a7', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'faq/index.html': {size: 148352, hash: '3a0b399c3050e40c39e070064f58437983a45ee5c4b615a911b040ade9f12879', text: () => import('./assets-chunks/faq_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 173526, hash: '37edd12a8ac84366444e49f143e61b1a23b8a9ca35646d329737e059034d453a', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'about/index.html': {size: 155996, hash: '14341a965836ecfe2edff6c8b5bb7a8863cfb684fa758040c9573ae935150d0f', text: () => import('./assets-chunks/about_index_html.mjs').then(m => m.default)},
+    'konyveles/index.html': {size: 155540, hash: 'de92d108d87f48bc0f716d9cdadf25bf47008439e12f6051c89d9752a9c09017', text: () => import('./assets-chunks/konyveles_index_html.mjs').then(m => m.default)},
+    'carrier/index.html': {size: 144776, hash: '4ed0a73aaabbbd0ac743d9091660ab911124bcb9ac14ad1e8904a365edaa2779', text: () => import('./assets-chunks/carrier_index_html.mjs').then(m => m.default)},
+    'contact/index.html': {size: 142323, hash: 'a4fa6b13124f5ec4605c821d30cc890c5cc2ead61dbe069420777d2a0771a8df', text: () => import('./assets-chunks/contact_index_html.mjs').then(m => m.default)},
+    'adotanacsadas/index.html': {size: 155549, hash: '213a65d8d7c7bc721f0c89f91f07b4faf3ce774e97797466f97eefb9ce9f1a77', text: () => import('./assets-chunks/adotanacsadas_index_html.mjs').then(m => m.default)},
+    'penzugyi/index.html': {size: 155539, hash: '31fdf15644869739a091063c83e3da7ac4c815e6e2fb3f56c34d6c68b88fe5a9', text: () => import('./assets-chunks/penzugyi_index_html.mjs').then(m => m.default)},
+    'documents/index.html': {size: 142359, hash: '094e254de6641277548752b0ce2c61398a28d6a249bf5b451619151cf83ce311', text: () => import('./assets-chunks/documents_index_html.mjs').then(m => m.default)},
+    'konyvvizsgalat/index.html': {size: 155551, hash: '3bc5d1978daf7c0c49cbfe352e38b18d12e2963782fea28438b388b85ec35561', text: () => import('./assets-chunks/konyvvizsgalat_index_html.mjs').then(m => m.default)},
+    'szamvitel/index.html': {size: 142491, hash: 'c092683c62b13b74b77c629669197b1743c76c383740d90a2f19bcb9a6e253fa', text: () => import('./assets-chunks/szamvitel_index_html.mjs').then(m => m.default)},
     'styles-EBTESGBP.css': {size: 1164064, hash: 'xte9xuV4zL0', text: () => import('./assets-chunks/styles-EBTESGBP_css.mjs').then(m => m.default)}
   },
 };
