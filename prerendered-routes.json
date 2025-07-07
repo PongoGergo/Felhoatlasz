@@ -1,15 +1,15 @@
 {
   "routes": {
-    "/Felhoatlasz": {},
-    "/Felhoatlasz/about": {},
-    "/Felhoatlasz/adotanacsadas": {},
-    "/Felhoatlasz/carrier": {},
-    "/Felhoatlasz/contact": {},
-    "/Felhoatlasz/documents": {},
-    "/Felhoatlasz/faq": {},
-    "/Felhoatlasz/konyveles": {},
-    "/Felhoatlasz/konyvvizsgalat": {},
-    "/Felhoatlasz/penzugyi": {},
-    "/Felhoatlasz/szamvitel": {}
+    "/": {},
+    "/about": {},
+    "/adotanacsadas": {},
+    "/carrier": {},
+    "/contact": {},
+    "/documents": {},
+    "/faq": {},
+    "/konyveles": {},
+    "/konyvvizsgalat": {},
+    "/penzugyi": {},
+    "/szamvitel": {}
   }
 }

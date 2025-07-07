@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/Felhoatlasz',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
