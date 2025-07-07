@@ -7,10 +7,10 @@
         <div class="header-top-left">
           <div class="header-top-social">
             <span>Kövessen minket: </span>
-            <a href="/"><i class="fab fa-facebook-f"></i></a>
-            <a href="/"><i class="fab fa-instagram"></i></a>
-            <a href="/"><i class="fab fa-youtube"></i></a>
-            <a href="/"><i class="fab fa-whatsapp"></i></a>
+            <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+            <a routerLink="/"><i class="fab fa-instagram"></i></a>
+            <a routerLink="/"><i class="fab fa-youtube"></i></a>
+            <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="header-top-right">
@@ -42,7 +42,7 @@
   <div class="main-navigation">
     <nav class="navbar navbar-expand-lg">
       <div class="container position-relative">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" routerLink="/">
           <img src="assets/img/logo/logo.png" alt="logo" />
         </a>
         <div class="mobile-menu-right">
@@ -67,36 +67,36 @@
         <div class="collapse navbar-collapse" id="main_nav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/">Főoldal</a>
+              <a class="nav-link" routerLink="/">Főoldal</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="/"
+                routerLink="/"
                 data-bs-toggle="dropdown"
                 >Szolgáltatások</a
               >
               <ul class="dropdown-menu fade-down">
                 <li>
-                  <a class="dropdown-item" href="/szamvitel"
+                  <a class="dropdown-item" routerLink="/szamvitel"
                     >Számviteli szolgáltatás</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/konyveles">Könyvelés</a>
+                  <a class="dropdown-item" routerLink="/konyveles">Könyvelés</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/konyvvizsgalat"
+                  <a class="dropdown-item" routerLink="/konyvvizsgalat"
                     >Könyvvizsgálat</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/adotanacsadas"
+                  <a class="dropdown-item" routerLink="/adotanacsadas"
                     >Adótanácsadás</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/penzugyi"
+                  <a class="dropdown-item" routerLink="/penzugyi"
                     >Pénzügyi tanácsadás</a
                   >
                 </li>
@@ -105,26 +105,28 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="/"
+                routerLink="/"
                 data-bs-toggle="dropdown"
                 >Oldalak</a
               >
               <ul class="dropdown-menu fade-down">
-                <li><a class="dropdown-item" href="/about">Rólunk</a></li>
+                <li><a class="dropdown-item" routerLink="/about">Rólunk</a></li>
                 <li>
-                  <a class="dropdown-item" href="/carrier">Karrier</a>
+                  <a class="dropdown-item" routerLink="/carrier">Karrier</a>
                 </li>
-                <li><a class="dropdown-item" href="/faq">GYIK</a></li>
+                <li><a class="dropdown-item" routerLink="/faq">GYIK</a></li>
                 <li>
-                  <a class="dropdown-item" href="/documents">Dokumentumok</a>
+                  <a class="dropdown-item" routerLink="/documents"
+                    >Dokumentumok</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Kapcsolat</a>
+              <a class="nav-link" routerLink="/contact">Kapcsolat</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Google űrlap link</a>
+              <a class="nav-link" routerLink="/">Google űrlap link</a>
             </li>
           </ul>
           <div class="nav-right">
@@ -134,7 +136,7 @@
               </button>
             </div>
             <div class="nav-right-btn mt-2">
-              <a href="application-form.html" class="theme-btn"
+              <a routerLink="/" class="theme-btn"
                 ><span class="fal fa-pencil"></span>Jelentkezzen most</a
               >
             </div>
@@ -172,7 +174,7 @@
     <div class="container">
       <h2 class="breadcrumb-title">404 Error</h2>
       <ul class="breadcrumb-menu">
-        <li><a href="/">Főoldal</a></li>
+        <li><a routerLink="/">Főoldal</a></li>
         <li class="active">404 Error</li>
       </ul>
     </div>
@@ -191,7 +193,7 @@
           <p>
             The page you looking for not found may be it not exist or removed.
           </p>
-          <a href="/" class="theme-btn"
+          <a routerLink="/" class="theme-btn"
             >Go Back Főoldal <i class="far fa-home"></i
           ></a>
         </div>
@@ -211,7 +213,7 @@
       <div class="row footer-widget-wrapper pt-100 pb-70">
         <div class="col-md-6 col-lg-4">
           <div class="footer-widget-box about-us">
-            <a href="/" class="footer-logo">
+            <a routerLink="/" class="footer-logo">
               <img src="assets/img/logo/logo-light.png" alt="" />
             </a>
             <p class="mb-3">
@@ -242,26 +244,32 @@
             <h4 class="footer-widget-title">Quick Links</h4>
             <ul class="footer-list">
               <li>
-                <a href="/"><i class="fas fa-caret-right"></i> About Us</a>
+                <a routerLink="/"
+                  ><i class="fas fa-caret-right"></i> About Us</a
+                >
               </li>
               <li>
-                <a href="/"><i class="fas fa-caret-right"></i> FAQ's</a>
+                <a routerLink="/"><i class="fas fa-caret-right"></i> FAQ's</a>
               </li>
               <li>
-                <a href="/"><i class="fas fa-caret-right"></i> Testimonials</a>
+                <a routerLink="/"
+                  ><i class="fas fa-caret-right"></i> Testimonials</a
+                >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Terms Of Service</a
                 >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Privacy policy</a
                 >
               </li>
               <li>
-                <a href="/"><i class="fas fa-caret-right"></i> Update News</a>
+                <a routerLink="/"
+                  ><i class="fas fa-caret-right"></i> Update News</a
+                >
               </li>
             </ul>
           </div>
@@ -271,32 +279,34 @@
             <h4 class="footer-widget-title">Our Campus</h4>
             <ul class="footer-list">
               <li>
-                <a href="/"><i class="fas fa-caret-right"></i> Campus Safety</a>
+                <a routerLink="/"
+                  ><i class="fas fa-caret-right"></i> Campus Safety</a
+                >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Student Activities</a
                 >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Academic Department</a
                 >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Planning &
                   Administration</a
                 >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Office Of The
                   Chancellor</a
                 >
               </li>
               <li>
-                <a href="/"
+                <a routerLink="/"
                   ><i class="fas fa-caret-right"></i> Facility Services</a
                 >
               </li>
@@ -333,22 +343,22 @@
           <div class="col-md-6 align-self-center">
             <p class="copyright-text">
               &copy; Copyright <span id="date"></span>
-              <a href="/"> Felhőatlasz </a> All Rights Reserved.
+              <a routerLink="/"> Felhőatlasz </a> All Rights Reserved.
             </p>
           </div>
           <div class="col-md-6 align-self-center">
             <ul class="footer-social">
               <li>
-                <a href="/"><i class="fab fa-facebook-f"></i></a>
+                <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-whatsapp"></i></a>
+                <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-linkedin-in"></i></a>
+                <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-youtube"></i></a>
+                <a routerLink="/"><i class="fab fa-youtube"></i></a>
               </li>
             </ul>
           </div>
@@ -360,5 +370,5 @@
 <!-- footer area end -->
 
 <!-- scroll-top -->
-<a href="/" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+<a routerLink="/" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
 <!-- scroll-top end -->

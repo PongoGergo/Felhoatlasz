@@ -7,10 +7,10 @@
         <div class="header-top-left">
           <div class="header-top-social">
             <span>Kövessen minket: </span>
-            <a href="/"><i class="fab fa-facebook-f"></i></a>
-            <a href="/"><i class="fab fa-instagram"></i></a>
-            <a href="/"><i class="fab fa-youtube"></i></a>
-            <a href="/"><i class="fab fa-whatsapp"></i></a>
+            <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+            <a routerLink="/"><i class="fab fa-instagram"></i></a>
+            <a routerLink="/"><i class="fab fa-youtube"></i></a>
+            <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="header-top-right">
@@ -43,7 +43,7 @@
   <div class="main-navigation">
     <nav class="navbar navbar-expand-lg">
       <div class="container position-relative">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" routerLink="/">
           <img src="assets/img/logo/logo.png" alt="logo" />
         </a>
         <div class="mobile-menu-right">
@@ -68,36 +68,36 @@
         <div class="collapse navbar-collapse" id="main_nav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/">Főoldal</a>
+              <a class="nav-link" routerLink="/">Főoldal</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="/"
+                routerLink="/"
                 data-bs-toggle="dropdown"
                 >Szolgáltatások</a
               >
               <ul class="dropdown-menu fade-down">
                 <li>
-                  <a class="dropdown-item" href="/szamvitel"
+                  <a class="dropdown-item" routerLink="/szamvitel"
                     >Számviteli szolgáltatás</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/konyveles">Könyvelés</a>
+                  <a class="dropdown-item" routerLink="/konyveles">Könyvelés</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/konyvvizsgalat"
+                  <a class="dropdown-item" routerLink="/konyvvizsgalat"
                     >Könyvvizsgálat</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/adotanacsadas"
+                  <a class="dropdown-item" routerLink="/adotanacsadas"
                     >Adótanácsadás</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/penzugyi"
+                  <a class="dropdown-item" routerLink="/penzugyi"
                     >Pénzügyi tanácsadás</a
                   >
                 </li>
@@ -106,26 +106,28 @@
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
-                href="/"
+                routerLink="/"
                 data-bs-toggle="dropdown"
                 >Oldalak</a
               >
               <ul class="dropdown-menu fade-down">
-                <li><a class="dropdown-item" href="/about">Rólunk</a></li>
+                <li><a class="dropdown-item" routerLink="/about">Rólunk</a></li>
                 <li>
-                  <a class="dropdown-item" href="/carrier">Karrier</a>
+                  <a class="dropdown-item" routerLink="/carrier">Karrier</a>
                 </li>
-                <li><a class="dropdown-item" href="/faq">GYIK</a></li>
+                <li><a class="dropdown-item" routerLink="/faq">GYIK</a></li>
                 <li>
-                  <a class="dropdown-item" href="/documents">Dokumentumok</a>
+                  <a class="dropdown-item" routerLink="/documents"
+                    >Dokumentumok</a
+                  >
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Kapcsolat</a>
+              <a class="nav-link" routerLink="/contact">Kapcsolat</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/">Google űrlap link</a>
+              <a class="nav-link" routerLink="/">Google űrlap link</a>
             </li>
           </ul>
           <div class="nav-right">
@@ -135,7 +137,7 @@
               </button>
             </div>
             <div class="nav-right-btn mt-2">
-              <a href="application-form.html" class="theme-btn"
+              <a routerLink="/" class="theme-btn"
                 ><span class="fal fa-pencil"></span>Jelentkezzen most</a
               >
             </div>
@@ -202,10 +204,10 @@
                     data-animation="fadeInUp"
                     data-delay="1s"
                   >
-                    <a href="/about" class="theme-btn"
+                    <a routerLink="/about" class="theme-btn"
                       >Rólunk<i class="fas fa-arrow-right-long"></i
                     ></a>
-                    <a href="/contact" class="theme-btn theme-btn2"
+                    <a routerLink="/contact" class="theme-btn theme-btn2"
                       >Kapcsolat<i class="fas fa-arrow-right-long"></i
                     ></a>
                   </div>
@@ -249,10 +251,10 @@
                     data-animation="fadeInUp"
                     data-delay="1s"
                   >
-                    <a href="/about" class="theme-btn"
+                    <a routerLink="/about" class="theme-btn"
                       >Rólunk<i class="fas fa-arrow-right-long"></i
                     ></a>
-                    <a href="/contact" class="theme-btn theme-btn2"
+                    <a routerLink="/contact" class="theme-btn theme-btn2"
                       >Kapcsolat<i class="fas fa-arrow-right-long"></i
                     ></a>
                   </div>
@@ -296,10 +298,10 @@
                     data-animation="fadeInUp"
                     data-delay="1s"
                   >
-                    <a href="/about" class="theme-btn"
+                    <a routerLink="/about" class="theme-btn"
                       >Rólunk<i class="fas fa-arrow-right-long"></i
                     ></a>
-                    <a href="/contact" class="theme-btn theme-btn2"
+                    <a routerLink="/contact" class="theme-btn theme-btn2"
                       >Kapcsolat<i class="fas fa-arrow-right-long"></i
                     ></a>
                   </div>
@@ -458,7 +460,7 @@
               </div>
             </div>
             <div class="about-bottom">
-              <a href="/about" class="theme-btn"
+              <a routerLink="/about" class="theme-btn"
                 >Tudjon meg többet<i class="fas fa-arrow-right-long"></i
               ></a>
               <div class="about-phone">
@@ -744,10 +746,10 @@
               <img src="assets/img/team/01.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a href="/"><i class="fab fa-facebook-f"></i></a>
-              <a href="/"><i class="fab fa-whatsapp"></i></a>
-              <a href="/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="/"><i class="fab fa-youtube"></i></a>
+              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -766,10 +768,10 @@
               <img src="assets/img/team/02.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a href="/"><i class="fab fa-facebook-f"></i></a>
-              <a href="/"><i class="fab fa-whatsapp"></i></a>
-              <a href="/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="/"><i class="fab fa-youtube"></i></a>
+              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -788,10 +790,10 @@
               <img src="assets/img/team/03.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a href="/"><i class="fab fa-facebook-f"></i></a>
-              <a href="/"><i class="fab fa-whatsapp"></i></a>
-              <a href="/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="/"><i class="fab fa-youtube"></i></a>
+              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -810,10 +812,10 @@
               <img src="assets/img/team/04.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a href="/"><i class="fab fa-facebook-f"></i></a>
-              <a href="/"><i class="fab fa-whatsapp"></i></a>
-              <a href="/"><i class="fab fa-linkedin-in"></i></a>
-              <a href="/"><i class="fab fa-youtube"></i></a>
+              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -1015,7 +1017,7 @@
       <div class="row footer-widget-wrapper pt-100 pb-70">
         <div class="col-md-6 col-lg-4">
           <div class="footer-widget-box about-us">
-            <a href="/" class="footer-logo">
+            <a routerLink="/" class="footer-logo">
               <img src="assets/img/logo/logo-light.png" alt="" />
             </a>
             <p class="mb-3">
@@ -1045,23 +1047,25 @@
             <h4 class="footer-widget-title">Gyors linkek</h4>
             <ul class="footer-list">
               <li>
-                <a href="/about"><i class="fas fa-caret-right"></i> Rólunk</a>
+                <a routerLink="/about"
+                  ><i class="fas fa-caret-right"></i> Rólunk</a
+                >
               </li>
               <li>
-                <a href="/faq"><i class="fas fa-caret-right"></i> GYIK</a>
+                <a routerLink="/faq"><i class="fas fa-caret-right"></i> GYIK</a>
               </li>
               <li>
-                <a href="/carrier"
+                <a routerLink="/carrier"
                   ><i class="fas fa-caret-right"></i> Karrier</a
                 >
               </li>
               <li>
-                <a href="/documents"
+                <a routerLink="/documents"
                   ><i class="fas fa-caret-right"></i> Dokumentumok</a
                 >
               </li>
               <li>
-                <a href="/contact"
+                <a routerLink="/contact"
                   ><i class="fas fa-caret-right"></i> Kapcsolat</a
                 >
               </li>
@@ -1101,22 +1105,22 @@
           <div class="col-md-6 align-self-center">
             <p class="copyright-text">
               &copy; Copyright <span id="date"></span>
-              <a href="/"> Felhőatlasz </a> Minden jog fenntartva.
+              <a routerLink="/"> Felhőatlasz </a> Minden jog fenntartva.
             </p>
           </div>
           <div class="col-md-6 align-self-center">
             <ul class="footer-social">
               <li>
-                <a href="/"><i class="fab fa-facebook-f"></i></a>
+                <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-linkedin-in"></i></a>
+                <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-whatsapp"></i></a>
+                <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
               </li>
               <li>
-                <a href="/"><i class="fab fa-youtube"></i></a>
+                <a routerLink="/"><i class="fab fa-youtube"></i></a>
               </li>
             </ul>
           </div>
@@ -1128,4 +1132,4 @@
 <!-- footer area end -->
 
 <!-- scroll-top -->
-<a href="/" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+<a routerLink="/" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
