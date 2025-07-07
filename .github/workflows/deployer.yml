@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,10 +34,11 @@ jobs:
 
       - name: Build Angular app
         run: |
-          npm run build -- --configuration=production --base-href=/Felhoatlasz/
+          npx ng build --configuration production --base-href=/Felhoatlasz/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: master
+          branch: gh-pages
           folder: dist/Felhoatlasz
+          token: ${{ secrets.GITHUB_TOKEN }}
