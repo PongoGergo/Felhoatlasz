@@ -31,10 +31,13 @@ jobs:
       - name: Install dependencies
         run: |
           npm install --legacy-peer-deps
-
+          
+      - name: Clean dist folder
+        run: rm -rf dist/*
+        
       - name: Build Angular app
         run: |
-          npx ng build --configuration production --base-href=/Felhoatlasz/
+          npm run build --configuration=production --base-href=/Felhoatlasz/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
