@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SPS": {
+    "Felhoatlasz": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -79,10 +79,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "SPS:build:production"
+              "buildTarget": "Felhoatlasz:build:production"
             },
             "development": {
-              "buildTarget": "SPS:build:development"
+              "buildTarget": "Felhoatlasz:build:development"
             }
           },
           "defaultConfiguration": "development"
