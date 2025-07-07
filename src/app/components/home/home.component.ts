@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule],
+  standalone: true,
+  imports: [CarouselModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
