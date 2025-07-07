@@ -7,10 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:SPS": "node dist/SPS/server/server.mjs"
+    "serve:ssr": "node dist/SPS/server/server.mjs"
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.0.4",
     "@angular/common": "^20.0.0",
     "@angular/compiler": "^20.0.0",
     "@angular/core": "^20.0.0",
@@ -19,7 +20,14 @@
     "@angular/platform-server": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.3",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.3.7",
     "express": "^5.1.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "magnific-popup": "^1.2.0",
+    "ngx-owl-carousel-o": "^20.0.0",
+    "owl.carousel": "^2.3.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
