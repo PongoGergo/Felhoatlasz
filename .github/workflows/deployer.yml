@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Angular app
         run: |
-          npm run build --configuration=production --base-href=/Felhoatlasz/
+          ng build --configuration production --base-href=/Felhoatlasz/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
