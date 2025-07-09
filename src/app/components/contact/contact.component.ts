@@ -20,9 +20,8 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      from_name: ['', Validators.required],
-      from_email: ['', [Validators.required, Validators.email]],
-      subject: ['', Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     });
   }
@@ -31,10 +30,10 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid) {
       emailjs
         .send(
-          'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-          'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+          'service_p1poi47', // Replace with your EmailJS Service ID
+          'template_94k3zt5', // Replace with your EmailJS Template ID - Kapcsolat Tempalte ID
           this.contactForm.value,
-          'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
+          'aPvCY-7RKUvMLvp5K' // Replace with your EmailJS Public Key
         )
         .then(
           (response) => {

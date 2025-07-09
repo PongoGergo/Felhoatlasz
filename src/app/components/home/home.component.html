@@ -749,6 +749,148 @@
   </div>
   <!-- choose-area end -->
 
+  <!-- contact area -->
+  <div class="contact-area py-120">
+    <div class="container">
+      <div class="contact-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-icon">
+                <i class="fal fa-map-location-dot"></i>
+              </div>
+              <div class="contact-info-content">
+                <h5>Irodánk címe</h5>
+                <p>1083 Budapest, Práter utca 29</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-icon">
+                <i class="fal fa-phone-volume"></i>
+              </div>
+              <div class="contact-info-content">
+                <h5>Hívjon</h5>
+                <p>+36 30 123 4567</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <div class="contact-info-icon">
+                <i class="fal fa-envelopes"></i>
+              </div>
+              <div class="contact-info-content">
+                <h5>Küldjön e-mailt</h5>
+                <p>info&#64;felhoatlasz.hu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="contact-img">
+              <img src="assets/img/contact/01.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-7 align-self-center">
+            <div class="contact-form">
+              <div class="contact-form-header">
+                <h2>Üzleti kapcsolat - ajánlatkérés</h2>
+                <p>
+                  Elakadt a könyvelési útvesztőben, vagy egyszerűen csak
+                  megbízható és modern partnerre vágyik, aki leveszi a pénzügyek
+                  terhét a válláról? Ne habozzon felvenni velünk a kapcsolatot!
+                </p>
+              </div>
+              <form
+                [formGroup]="contactForm"
+                (ngSubmit)="sendEmail()"
+                id="contact-form"
+              >
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        formControlName="name"
+                        placeholder="Az ön neve"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        formControlName="email"
+                        name="email"
+                        placeholder="Az ön e-mail címe"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        formControlName="tel"
+                        name="tel"
+                        placeholder="Az ön telefon száma"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        formControlName="tax_num"
+                        name="tax"
+                        placeholder="Az ön adószáma"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <p>Első kérdés amire válaszol a felhasználó?</p>
+                  <textarea
+                    name="answer1"
+                    formControlName="answer1"
+                    cols="30"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Válasz 1."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="theme-btn"
+                  [disabled]="contactForm.invalid"
+                >
+                  Küldés <i class="far fa-paper-plane"></i>
+                </button>
+                <div class="col-md-12 mt-3">
+                  <div class="form-messege text-success"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end contact area -->
+
   <!-- gallery-area -->
   <!--<div class="gallery-area py-120">
     <div class="container">

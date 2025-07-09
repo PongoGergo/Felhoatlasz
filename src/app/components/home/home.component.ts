@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselModule, RouterModule],
+  imports: [CarouselModule, RouterModule, ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -150,7 +157,45 @@ export class HomeComponent implements OnInit {
     autoplay: true,
     autoplayHoverPause: true,
   };
-  constructor() {}
+  contactForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      tel: ['', Validators.required],
+      tax_num: ['', Validators.required],
+      answer1: ['', Validators.required],
+    });
+  }
+
+  public sendEmail() {
+    if (this.contactForm.valid) {
+      emailjs
+        .send(
+          'service_p1poi47', // Replace with your EmailJS Service ID
+          'template_x9ejqxi', // Replace with your EmailJS Template ID - Ajánlat Tempalte ID
+          this.contactForm.value,
+          'aPvCY-7RKUvMLvp5K' // Replace with your EmailJS Public Key
+        )
+        .then(
+          (response) => {
+            console.log(
+              'Email sent successfully!',
+              response.status,
+              response.text
+            );
+            alert('Your message has been sent successfully!');
+            this.contactForm.reset();
+          },
+          (error) => {
+            console.error('Failed to send email:', error);
+            alert('Failed to send message. Please try again later.');
+          }
+        );
+    } else {
+      alert('Please fill in all required fields correctly.');
+    }
+  }
 
   ngOnInit() {}
 }
