@@ -1637,7 +1637,6 @@ label {
   z-index: -1;
 }
 
-::ng-deep{
   .hero-section .owl-carousel{
     position: relative;
   }
@@ -1711,7 +1710,7 @@ label {
 
   }
 
-}
+
 
 @media all and (max-width: 991px) {
 
@@ -2769,7 +2768,6 @@ label {
 }
 
 
-::ng-deep{
   .testimonial-area .owl-dots {
     text-align: center;
     margin-top: 30px;
@@ -2788,7 +2786,7 @@ label {
   .testimonial-area .owl-dots .owl-dot.active span {
     width: 20px;
   }
-}
+
 
 .testimonial-rate {
   color: #04baf9;
@@ -3035,8 +3033,6 @@ label {
   margin-bottom: 0;
 }
 
-::ng-deep{
-
   .event-slider .owl-dots {
     text-align: center;
     margin-top: 40px;
@@ -3107,7 +3103,7 @@ label {
   .event-slider .owl-nav .owl-next:hover{
     right:-65px;
   }
-}
+
 
 
 /* ===================
@@ -3360,8 +3356,6 @@ label {
   margin-bottom: 0;
 }
 
-
-::ng-deep{
   .department-slider .owl-dots {
     text-align: center;
     margin-top: 40px;
@@ -3432,8 +3426,6 @@ label {
   .department-slider .owl-nav .owl-next:hover{
     right:-65px;
   }
-
-}
 
 /*==================
 35. Department single
