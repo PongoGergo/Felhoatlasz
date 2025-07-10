@@ -1638,9 +1638,18 @@ label {
 }
 
 ::ng-deep{
+  .hero-slider .owl-carousel{
+    position: relative;
+  }
 
   .hero-slider .owl-nav {
-    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 1%;
   }
 
   .hero-slider .owl-nav [class*=owl-] {
