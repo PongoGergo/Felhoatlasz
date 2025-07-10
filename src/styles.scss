@@ -2593,6 +2593,7 @@ label {
 }
 
 .choose-img img{
+  object-fit: cover;
   border-radius: 30% 0 30% 30%;
 }
 
@@ -4045,6 +4046,7 @@ label {
 
 .contact-img img{
   width: 100%;
+  object-fit: cover;
   clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 50%, 10% 0);
 }
 
