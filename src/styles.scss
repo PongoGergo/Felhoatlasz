@@ -1639,33 +1639,33 @@ label {
 
 ::ng-deep{
   .hero-section .owl-carousel{
-    position: relative !important;
+    position: relative;
   }
 
   .hero-section .owl-nav {
-    position: absolute !important;
-    top: 50% !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    margin: 0 !important;
-    padding: 0 1% !important;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 1%;
   }
 
   .hero-section .owl-nav [class*=owl-] {
-    color: #ffffff !important;
-    font-size: 25px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: rgba(255, 255, 255, 0.2) !important;
-    display: inline-block !important;
-    cursor: pointer !important;
-    height: 55px !important;
-    width: 55px !important;
-    line-height: 55px !important;
-    border-radius: 50px !important;
-    text-align: center !important;
-    transition: all .5s ease-in-out !important;
+    color: #ffffff;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    text-align: center;
+    transition: all .5s ease-in-out;
   }
 
   .hero-section .owl-nav [class*=owl-]:hover {
