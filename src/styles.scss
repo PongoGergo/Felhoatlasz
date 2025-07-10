@@ -2593,6 +2593,7 @@ label {
 }
 
 .choose-img img{
+  min-height: 400px;
   object-fit: cover;
   border-radius: 30% 0 30% 30%;
 }
@@ -4048,6 +4049,11 @@ label {
   width: 100%;
   object-fit: cover;
   clip-path: polygon(100% 0, 100% 100%, 10% 100%, 0 50%, 10% 0);
+}
+@media (min-width: 992px) {
+  .contact-img img{
+    min-height: 100%;
+  }
 }
 
 .contact-form{
