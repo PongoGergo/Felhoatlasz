@@ -1,0 +1,15 @@
+{
+  "routes": {
+    "/": {},
+    "/about": {},
+    "/adotanacsadas": {},
+    "/carrier": {},
+    "/contact": {},
+    "/documents": {},
+    "/faq": {},
+    "/konyveles": {},
+    "/konyvvizsgalat": {},
+    "/penzugyi": {},
+    "/szamvitel": {}
+  }
+}
