@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
@@ -5,7 +6,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CarouselModule, RouterModule],
+  imports: [CommonModule, CarouselModule, RouterModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
