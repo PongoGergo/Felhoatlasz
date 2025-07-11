@@ -10,6 +10,11 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'Felhőatlasz';
+  mobilenavCollapse = true;
 
   constructor() {}
+
+  toggleNavBar() {
+    this.mobilenavCollapse = !this.mobilenavCollapse;
+  }
 }

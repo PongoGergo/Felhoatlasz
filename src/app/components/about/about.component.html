@@ -2,7 +2,7 @@
   <!-- breadcrumb -->
   <div
     class="site-breadcrumb"
-    style="background: url(assets/img/breadcrumb/01.jpg)"
+    style="background: url(assets/img/breadcrumb/about.jpg)"
   >
     <div class="container">
       <h2 class="breadcrumb-title">Rólunk</h2>
@@ -215,7 +215,8 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-slider owl-carousel owl-theme">
+    <owl-carousel-o class="testimonial-slider" [options]="testimonialOptions">
+      <ng-template carouselSlide>
         <div class="testimonial-item">
           <div class="testimonial-rate">
             <i class="fas fa-star"></i>
@@ -243,6 +244,8 @@
             ><i class="far fa-quote-right"></i
           ></span>
         </div>
+      </ng-template>
+      <ng-template carouselSlide>
         <div class="testimonial-item">
           <div class="testimonial-rate">
             <i class="fas fa-star"></i>
@@ -270,6 +273,8 @@
             ><i class="far fa-quote-right"></i
           ></span>
         </div>
+      </ng-template>
+      <ng-template carouselSlide>
         <div class="testimonial-item">
           <div class="testimonial-rate">
             <i class="fas fa-star"></i>
@@ -297,6 +302,8 @@
             ><i class="far fa-quote-right"></i
           ></span>
         </div>
+      </ng-template>
+      <ng-template carouselSlide>
         <div class="testimonial-item">
           <div class="testimonial-rate">
             <i class="fas fa-star"></i>
@@ -324,6 +331,8 @@
             ><i class="far fa-quote-right"></i
           ></span>
         </div>
+      </ng-template>
+      <ng-template carouselSlide>
         <div class="testimonial-item">
           <div class="testimonial-rate">
             <i class="fas fa-star"></i>
@@ -351,13 +360,13 @@
             ><i class="far fa-quote-right"></i
           ></span>
         </div>
-      </div>
-    </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
   <!-- testimonial area end -->
 
   <!-- team-area -->
-  <div class="team-area py-120">
+  <!--<div class="team-area py-120">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mx-auto">
@@ -464,7 +473,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <!-- team-area end -->
 
   <!-- partner area -->
