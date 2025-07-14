@@ -31,116 +31,120 @@
           </div>
         </div>
         <div class="col-lg-12">
-          <p-accordion class="accordion" id="accordionExample">
-            <p-accordion-panel class="accordion-item" value="0">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span>Miért érdemes a
-                Felhőatlaszt választanom?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  A Felhőatlasz a precíz és modern könyvelés záloga, amely
-                  szabaddá teszi a növekedéshez. Szakértő csapatunkkal, széles
-                  körű online szolgáltatásainkkal és megfizethető árainkkal
-                  biztosítjuk, hogy pénzügyei mindig a legjobb kezekben
-                  legyenek, Ön pedig a vállalkozása fejlesztésére
-                  koncentrálhasson.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span> Milyen típusú
-                vállalkozásoknak nyújtanak szolgáltatást?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  Szolgáltatásainkat kis- és középvállalkozásoknak (KKV-k),
-                  egyéni vállalkozóknak, startupoknak és induló cégeknek
-                  egyaránt ajánljuk, akik megbízható, modern és költséghatékony
-                  könyvelési megoldásokat keresnek. Rugalmasan alkalmazkodunk az
-                  eltérő iparágak és vállalkozási formák speciális igényeihez.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span>Milyen
-                szolgáltatásokat kínál a Felhőatlasz?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  A könyveléstől és bérszámfejtéstől kezdve, az adótanácsadáson
-                  át, a cégalapítással kapcsolatos ügyintézésig minden pénzügyi
-                  és adminisztratív feladatban támogatást nyújtunk. Célunk, hogy
-                  teljes körű pénzügyi háttérrel segítsük vállalkozása
-                  zökkenőmentes működését.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span> Hogyan működik az
-                online könyvelés Önöknél?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  Online szolgáltatásainkkal kényelmesen és biztonságosan
-                  intézheti pénzügyeit, bárhonnan. Digitális platformjainkon
-                  keresztül egyszerűen és gyorsan küldhetők be a dokumentumok,
-                  nyomon követhetők a folyamatok, és folyamatosan kommunikálhat
-                  szakértőinkkel. Ez időt és energiát takarít meg Önnek.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span>Mennyibe kerülnek a
-                Felhőatlasz szolgáltatásai?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  Prémium könyvelési szolgáltatásainkat versenyképes, átlátható
-                  áron kínáljuk. Mivel minden vállalkozás egyedi, az árajánlatot
-                  az Ön cégének mérete, tevékenységi köre és az igényelt
-                  szolgáltatások komplexitása alapján, személyre szabottan
-                  állítjuk össze egy ingyenes konzultációt követően. Nincsenek
-                  rejtett költségek.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span>Mit kell tennem, ha
-                szeretném Önökhöz áthelyezni a könyvelésemet?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  Az átállás rendkívül egyszerű! Vegye fel velünk a kapcsolatot
-                  telefonon vagy e-mailben, és kérjen egy ingyenes,
-                  kötelezettségmentes konzultációt. Ennek során felmérjük az Ön
-                  igényeit, tájékoztatjuk a folyamatról, és segítünk az összes
-                  szükséges dokumentum beszerzésében és az átadás-átvételi
-                  folyamat zökkenőmentes lebonyolításában.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-            <p-accordion-panel class="accordion-item">
-              <p-accordion-header class="accordion-header">
-                <span><i class="far fa-question"></i></span>Mennyire
-                biztonságosak az adataim az Önöknél?
-              </p-accordion-header>
-              <p-accordion-content>
-                <div class="accordion-body">
-                  Az adatvédelem kiemelten fontos számunkra. Rendszereinket a
-                  legszigorúbb biztonsági előírásoknak megfelelően,
-                  titkosítottan üzemeltetjük, és minden adatkezelési folyamatunk
-                  megfelel a GDPR előírásainak. Adatai nálunk maximális
-                  biztonságban vannak.
-                </div>
-              </p-accordion-content>
-            </p-accordion-panel>
-          </p-accordion>
+          <p-card>
+            <p-accordion [value]="['0']" [multiple]="true">
+              <p-accordion-panel value="0">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span>Miért érdemes a
+                  Felhőatlaszt választanom?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    A Felhőatlasz a precíz és modern könyvelés záloga, amely
+                    szabaddá teszi a növekedéshez. Szakértő csapatunkkal, széles
+                    körű online szolgáltatásainkkal és megfizethető árainkkal
+                    biztosítjuk, hogy pénzügyei mindig a legjobb kezekben
+                    legyenek, Ön pedig a vállalkozása fejlesztésére
+                    koncentrálhasson.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="1">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span> Milyen típusú
+                  vállalkozásoknak nyújtanak szolgáltatást?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    Szolgáltatásainkat kis- és középvállalkozásoknak (KKV-k),
+                    egyéni vállalkozóknak, startupoknak és induló cégeknek
+                    egyaránt ajánljuk, akik megbízható, modern és
+                    költséghatékony könyvelési megoldásokat keresnek. Rugalmasan
+                    alkalmazkodunk az eltérő iparágak és vállalkozási formák
+                    speciális igényeihez.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="2">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span>Milyen
+                  szolgáltatásokat kínál a Felhőatlasz?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    A könyveléstől és bérszámfejtéstől kezdve, az
+                    adótanácsadáson át, a cégalapítással kapcsolatos
+                    ügyintézésig minden pénzügyi és adminisztratív feladatban
+                    támogatást nyújtunk. Célunk, hogy teljes körű pénzügyi
+                    háttérrel segítsük vállalkozása zökkenőmentes működését.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="3">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span> Hogyan működik az
+                  online könyvelés Önöknél?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    Online szolgáltatásainkkal kényelmesen és biztonságosan
+                    intézheti pénzügyeit, bárhonnan. Digitális platformjainkon
+                    keresztül egyszerűen és gyorsan küldhetők be a dokumentumok,
+                    nyomon követhetők a folyamatok, és folyamatosan
+                    kommunikálhat szakértőinkkel. Ez időt és energiát takarít
+                    meg Önnek.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="4">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span>Mennyibe kerülnek
+                  a Felhőatlasz szolgáltatásai?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    Prémium könyvelési szolgáltatásainkat versenyképes,
+                    átlátható áron kínáljuk. Mivel minden vállalkozás egyedi, az
+                    árajánlatot az Ön cégének mérete, tevékenységi köre és az
+                    igényelt szolgáltatások komplexitása alapján, személyre
+                    szabottan állítjuk össze egy ingyenes konzultációt követően.
+                    Nincsenek rejtett költségek.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="5">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span>Mit kell tennem,
+                  ha szeretném Önökhöz áthelyezni a könyvelésemet?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    Az átállás rendkívül egyszerű! Vegye fel velünk a
+                    kapcsolatot telefonon vagy e-mailben, és kérjen egy
+                    ingyenes, kötelezettségmentes konzultációt. Ennek során
+                    felmérjük az Ön igényeit, tájékoztatjuk a folyamatról, és
+                    segítünk az összes szükséges dokumentum beszerzésében és az
+                    átadás-átvételi folyamat zökkenőmentes lebonyolításában.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+              <p-accordion-panel value="6">
+                <p-accordion-header>
+                  <span><i class="far fa-question"></i></span>Mennyire
+                  biztonságosak az adataim az Önöknél?
+                </p-accordion-header>
+                <p-accordion-content>
+                  <p>
+                    Az adatvédelem kiemelten fontos számunkra. Rendszereinket a
+                    legszigorúbb biztonsági előírásoknak megfelelően,
+                    titkosítottan üzemeltetjük, és minden adatkezelési
+                    folyamatunk megfelel a GDPR előírásainak. Adatai nálunk
+                    maximális biztonságban vannak.
+                  </p>
+                </p-accordion-content>
+              </p-accordion-panel>
+            </p-accordion>
+          </p-card>
         </div>
       </div>
     </div>
