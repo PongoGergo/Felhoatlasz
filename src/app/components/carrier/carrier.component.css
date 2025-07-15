@@ -1,0 +1,14 @@
+ul{
+  margin-left: 1rem;
+}
+li{
+  margin-left: 1rem;
+  list-style: disc;
+}
+li span{
+  color: #04baf9;
+  font-weight: bold;
+}
+.carrier-section{
+  margin-bottom: 2rem;
+}
