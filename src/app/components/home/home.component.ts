@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { InputMaskModule } from 'primeng/inputmask';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { TextareaModule } from 'primeng/textarea';
+import { InputTextModule } from 'primeng/inputtext';
 import {
   FormBuilder,
   FormGroup,
@@ -12,7 +16,15 @@ import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarouselModule, RouterModule, ReactiveFormsModule],
+  imports: [
+    CarouselModule,
+    RouterModule,
+    ReactiveFormsModule,
+    InputMaskModule,
+    FloatLabelModule,
+    TextareaModule,
+    InputTextModule,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

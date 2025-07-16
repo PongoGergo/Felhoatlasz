@@ -1,6 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { InputMaskModule } from 'primeng/inputmask';
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { TextareaModule } from 'primeng/textarea';
+import { InputTextModule } from 'primeng/inputtext';
 import {
   FormBuilder,
   FormGroup,
@@ -12,7 +16,15 @@ import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+    InputMaskModule,
+    FloatLabelModule,
+    InputTextModule,
+    TextareaModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
