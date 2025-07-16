@@ -273,5 +273,7 @@
 <!-- footer area end -->
 
 <!-- scroll-top -->
-<a routerLink="/" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+<a class="scroll-to-top" *ngIf="isShow" (click)="gotoTop()">
+  <i class="far fa-arrow-up-from-arc"></i>
+</a>
 <!-- scroll-top end -->
