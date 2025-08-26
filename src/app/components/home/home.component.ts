@@ -5,6 +5,9 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TextareaModule } from 'primeng/textarea';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputGroupModule } from 'primeng/inputgroup';
+import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import {
   FormBuilder,
   FormGroup,
@@ -27,6 +30,9 @@ import { MessageModule } from 'primeng/message';
     FloatLabelModule,
     TextareaModule,
     InputTextModule,
+    InputNumberModule,
+    InputGroupModule,
+    InputGroupAddonModule,
     DialogModule,
     ButtonModule,
     MessageModule,
@@ -180,7 +186,8 @@ export class HomeComponent implements OnInit {
   formClicked = false;
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: [null, Validators.required, Validators.minLength(1)],
+      companyName: [null, Validators.required, Validators.minLength(1)],
+      directorName: [null, Validators.required, Validators.minLength(1)],
       email: [null, [Validators.required, Validators.email]],
       tel: [null, Validators.required, Validators.minLength(1)],
       tax_num: [null, Validators.required, Validators.minLength(1)],
@@ -214,8 +221,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  get name() {
-    return this.contactForm.get('name')!;
+  get companyName() {
+    return this.contactForm.get('companyName')!;
+  }
+  get directorName() {
+    return this.contactForm.get('directorName')!;
   }
   get email() {
     return this.contactForm.get('email')!;

@@ -817,17 +817,40 @@
                         <input
                           pInputText
                           type="text"
-                          name="name"
-                          formControlName="name"
+                          name="companyName"
+                          formControlName="companyName"
                           required
                         />
-                        <label for="name">Név</label>
+                        <label for="companyName">Cégnév</label>
                       </p-floatlabel>
-                      @if ((name.invalid && name.hasError('required') &&
-                      (name.dirty || name.touched)) || (formClicked &&
-                      (name.untouched || name.pristine)) ) {
+                      @if ((companyName.invalid &&
+                      companyName.hasError('required') && (companyName.dirty ||
+                      companyName.touched)) || (formClicked &&
+                      (companyName.untouched || companyName.pristine)) ) {
                       <p-message severity="error" variant="simple" size="small"
-                        >Az név mező kötelező!</p-message
+                        >Az cégnév mező kötelező!</p-message
+                      >
+                      }
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <p-floatlabel>
+                        <input
+                          pInputText
+                          type="text"
+                          name="directorName"
+                          formControlName="directorName"
+                          required
+                        />
+                        <label for="directorName">Ügyvezető neve</label>
+                      </p-floatlabel>
+                      @if ((directorName.invalid &&
+                      directorName.hasError('required') && (directorName.dirty
+                      || directorName.touched)) || (formClicked &&
+                      (directorName.untouched || directorName.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >Az ügyvezető neve mező kötelező!</p-message
                       >
                       }
                     </div>
@@ -897,86 +920,85 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <p>Első kérdés amire válaszol a felhasználó?</p>
-                  <p-floatlabel class="mt-3">
-                    <textarea
-                      pTextarea
+                  <p>Előző lezárt év árbevétele:</p>
+                  <p-inputgroup>
+                    <p-inputnumber
+                      mode="currency"
+                      currency="HUF"
+                      locale="hu-HU"
                       name="answer1"
                       formControlName="answer1"
-                      cols="30"
-                      rows="5"
-                    ></textarea>
-                    <label for="answer1">Válasz 1.</label>
-                  </p-floatlabel>
+                      required
+                    ></p-inputnumber>
+                  </p-inputgroup>
                   @if ((answer1.invalid && answer1.hasError('required') &&
                   (answer1.dirty || answer1.touched)) || (formClicked &&
                   (answer1.untouched || answer1.pristine)) ) {
                   <p-message severity="error" variant="simple" size="small"
-                    >Az válasz mező kötelező!</p-message
+                    >Az árbevétel mező kötelező!</p-message
                   >
                   }
                 </div>
                 <div class="form-group">
-                  <p>Második kérdés amire válaszol a felhasználó?</p>
-                  <p-floatlabel class="mt-3">
-                    <textarea
-                      pTextarea
+                  <p>
+                    1 naptári év alatt kiállított szállítói számlák darabszáma:
+                  </p>
+                  <p-inputgroup>
+                    <p-inputnumber
                       name="answer2"
+                      locale="hu-HU"
                       formControlName="answer2"
-                      cols="30"
-                      rows="5"
-                    ></textarea>
-                    <label for="answer2">Válasz 2.</label>
-                  </p-floatlabel>
+                      required
+                    ></p-inputnumber>
+                    <p-inputgroup-addon>DB</p-inputgroup-addon>
+                  </p-inputgroup>
                   @if ((answer2.invalid && answer2.hasError('required') &&
                   (answer2.dirty || answer2.touched)) || (formClicked &&
                   (answer2.untouched || answer2.pristine)) ) {
                   <p-message severity="error" variant="simple" size="small"
-                    >Az válasz mező kötelező!</p-message
+                    >Az szállítói számlák mező kötelező!</p-message
                   >
                   }
                 </div>
                 <div class="form-group">
-                  <p>Harmadik kérdés amire válaszol a felhasználó?</p>
-                  <p-floatlabel class="mt-3">
-                    <textarea
-                      pTextarea
+                  <p>1 naptári év alatt kiállított vevői számlák darabszáma:</p>
+                  <p-inputgroup>
+                    <p-inputnumber
                       name="answer3"
+                      locale="hu-HU"
                       formControlName="answer3"
-                      cols="30"
-                      rows="5"
-                    ></textarea>
-                    <label for="answer3">Válasz 3.</label>
-                  </p-floatlabel>
+                      required
+                    ></p-inputnumber>
+                    <p-inputgroup-addon>DB</p-inputgroup-addon>
+                  </p-inputgroup>
                   @if ((answer3.invalid && answer3.hasError('required') &&
                   (answer3.dirty || answer3.touched)) || (formClicked &&
                   (answer3.untouched || answer3.pristine)) ) {
                   <p-message severity="error" variant="simple" size="small"
-                    >Az válasz mező kötelező!</p-message
+                    >Az vevői számlák mező kötelező!</p-message
                   >
                   }
                 </div>
                 <div class="form-group">
-                  <p>Negyedik kérdés amire válaszol a felhasználó?</p>
-                  <p-floatlabel class="mt-3">
-                    <textarea
-                      pTextarea
+                  <p>Bankszámlák darabszáma</p>
+                  <p-inputgroup>
+                    <p-inputnumber
                       name="answer4"
+                      locale="hu-HU"
                       formControlName="answer4"
-                      cols="30"
-                      rows="5"
-                    ></textarea>
-                    <label for="answer4">Válasz 4.</label>
-                  </p-floatlabel>
+                      required
+                    ></p-inputnumber>
+                    <p-inputgroup-addon>DB</p-inputgroup-addon>
+                  </p-inputgroup>
                   @if ((answer4.invalid && answer4.hasError('required') &&
                   (answer4.dirty || answer4.touched)) || (formClicked &&
                   (answer4.untouched || answer4.pristine)) ) {
                   <p-message severity="error" variant="simple" size="small"
-                    >Az válasz mező kötelező!</p-message
+                    >Az bankszámlák mező kötelező!</p-message
                   >
                   }
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                   <p>Ötödik kérdés amire válaszol a felhasználó?</p>
                   <p-floatlabel class="mt-3">
                     <textarea
@@ -995,7 +1017,7 @@
                     >Az válasz mező kötelező!</p-message
                   >
                   }
-                </div>
+                </div>-->
                 <button
                   type="submit"
                   class="theme-btn"
