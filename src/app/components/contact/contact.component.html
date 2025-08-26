@@ -87,8 +87,15 @@
                           formControlName="name"
                           required
                         />
-                        <label for="name">Név</label>
+                        <label for="name">Név *</label>
                       </p-floatlabel>
+                      @if ((name.invalid && name.hasError('required') &&
+                      (name.dirty || name.touched)) || (formClicked &&
+                      (name.untouched || name.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >A név mező kötelező!</p-message
+                      >
+                      }
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -98,11 +105,19 @@
                           pInputText
                           type="email"
                           formControlName="email"
+                          required
                           name="email"
                           required
                         />
-                        <label for="email">E-mail cím</label>
+                        <label for="email">E-mail cím *</label>
                       </p-floatlabel>
+                      @if ((email.invalid && email.hasError('required') &&
+                      (email.dirty || email.touched)) || (formClicked &&
+                      (email.untouched || email.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >A e-mail mező kötelező!</p-message
+                      >
+                      }
                     </div>
                   </div>
                 </div>
@@ -115,8 +130,15 @@
                       cols="30"
                       rows="5"
                     ></textarea>
-                    <label for="message">Üzenet</label>
+                    <label for="message">Üzenet *</label>
                   </p-floatlabel>
+                  @if ((message.invalid && message.hasError('required') &&
+                  (message.dirty || message.touched)) || (formClicked &&
+                  (message.untouched || message.pristine)) ) {
+                  <p-message severity="error" variant="simple" size="small"
+                    >Az üzenet mező kötelező!</p-message
+                  >
+                  }
                 </div>
                 <button
                   type="submit"
@@ -147,3 +169,18 @@
     ></iframe>
   </div>
 </main>
+
+<p-dialog
+  header="Sikeres kapcsolat felvétel"
+  [modal]="true"
+  [(visible)]="showDialog"
+  [style]="{ width: '25rem' }"
+>
+  <p>
+    Köszönjük, hogy felvette velünk a kapcsolatot, munkatársunk hamarosan
+    megkeresi önt!
+  </p>
+  <div class="flex justify-end gap-2">
+    <p-button label="Bezárás" (click)="showDialog = false" />
+  </div>
+</p-dialog>

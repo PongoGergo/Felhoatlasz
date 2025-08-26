@@ -12,6 +12,9 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { MessageModule } from 'primeng/message';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +27,9 @@ import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
     FloatLabelModule,
     TextareaModule,
     InputTextModule,
+    DialogModule,
+    ButtonModule,
+    MessageModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
@@ -170,44 +176,70 @@ export class HomeComponent implements OnInit {
     autoplayHoverPause: true,
   };
   contactForm: FormGroup;
+  showDialog = false;
+  formClicked = false;
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      tel: ['', Validators.required],
-      tax_num: ['', Validators.required],
-      answer1: ['', Validators.required],
+      name: [null, Validators.required, Validators.minLength(1)],
+      email: [null, [Validators.required, Validators.email]],
+      tel: [null, Validators.required, Validators.minLength(1)],
+      tax_num: [null, Validators.required, Validators.minLength(1)],
+      answer1: [null, Validators.required, Validators.minLength(1)],
+      answer2: [null, Validators.required, Validators.minLength(1)],
+      answer3: [null, Validators.required, Validators.minLength(1)],
+      answer4: [null, Validators.required, Validators.minLength(1)],
+      answer5: [null, Validators.required, Validators.minLength(1)],
     });
   }
 
   public sendEmail() {
+    this.formClicked = true;
     if (this.contactForm.valid) {
       emailjs
         .send(
-          'service_p1poi47', // Replace with your EmailJS Service ID
-          'template_x9ejqxi', // Replace with your EmailJS Template ID - Ajánlat Tempalte ID
+          'service_ei0exzo', // Replace with your EmailJS Service ID
+          'template_gx9zdhp', // Replace with your EmailJS Template ID - Ajánlat Tempalte ID
           this.contactForm.value,
-          'aPvCY-7RKUvMLvp5K' // Replace with your EmailJS Public Key
+          'aPvCY-3fJzdMT0h3UVGcglh' // Replace with your EmailJS Public Key
         )
         .then(
           (response) => {
-            console.log(
-              'Email sent successfully!',
-              response.status,
-              response.text
-            );
-            alert('Your message has been sent successfully!');
+            this.showDialog = true;
             this.contactForm.reset();
           },
-          (error) => {
-            console.error('Failed to send email:', error);
-            alert('Failed to send message. Please try again later.');
-          }
+          (error) => {}
         );
     } else {
-      alert('Please fill in all required fields correctly.');
+      this.contactForm.updateValueAndValidity();
     }
   }
 
+  get name() {
+    return this.contactForm.get('name')!;
+  }
+  get email() {
+    return this.contactForm.get('email')!;
+  }
+  get tel() {
+    return this.contactForm.get('tel')!;
+  }
+  get tax_num() {
+    return this.contactForm.get('tax_num')!;
+  }
+  get answer1() {
+    return this.contactForm.get('answer1')!;
+  }
+  get answer2() {
+    return this.contactForm.get('answer2')!;
+  }
+  get answer3() {
+    return this.contactForm.get('answer3')!;
+  }
+  get answer4() {
+    return this.contactForm.get('answer4')!;
+  }
+  get answer5() {
+    return this.contactForm.get('answer5')!;
+  }
   ngOnInit() {}
 }
