@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
           'service_ei0exzo', // Replace with your EmailJS Service ID
           'template_hzqkt8a', // Replace with your EmailJS Template ID - Kapcsolat Tempalte ID
           this.contactForm.value,
-          '3fJzdMT0h3UVGcglh' // Replace with your EmailJS Public Key
+          'iIEJLMsmD3Sbftu13' // Replace with your EmailJS Public Key
         )
         .then(
           (response) => {

@@ -207,7 +207,7 @@ export class HomeComponent implements OnInit {
           'service_ei0exzo', // Replace with your EmailJS Service ID
           'template_gx9zdhp', // Replace with your EmailJS Template ID - Ajánlat Tempalte ID
           this.contactForm.value,
-          'aPvCY-3fJzdMT0h3UVGcglh' // Replace with your EmailJS Public Key
+          'iIEJLMsmD3Sbftu13' // Replace with your EmailJS Public Key
         )
         .then(
           (response) => {
