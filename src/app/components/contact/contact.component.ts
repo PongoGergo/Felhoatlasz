@@ -40,9 +40,9 @@ export class ContactComponent implements OnInit {
   formClicked = false;
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: [null, Validators.required, Validators.minLength(1)],
+      name: [null, [Validators.required, Validators.minLength(1)]],
       email: [null, [Validators.required, Validators.email]],
-      message: [null, Validators.required, Validators.minLength(1)],
+      message: [null, [Validators.required, Validators.minLength(1)]],
     });
   }
 
@@ -60,6 +60,10 @@ export class ContactComponent implements OnInit {
           (response) => {
             this.showDialog = true;
             this.contactForm.reset();
+            this.contactForm.markAsUntouched();
+            this.contactForm.markAsPristine();
+            this.contactForm.updateValueAndValidity();
+            this.formClicked = false;
           },
           (error) => {}
         );

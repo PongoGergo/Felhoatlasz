@@ -2658,6 +2658,7 @@ label {
   box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
   padding: 15px 15px 15px 0;
   overflow: hidden;
+  min-height: 100%;
 }
 
 .choose-item-icon{
@@ -4136,7 +4137,7 @@ label {
 }
 
 .col-md-6 .form-group {
-  min-height: 75px;
+  min-height: 100px;
 }
 .col-md-12 .form-group {
   min-height: 260px;

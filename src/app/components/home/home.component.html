@@ -945,13 +945,7 @@
                 <button
                   type="submit"
                   class="theme-btn"
-                  [disabled]="
-                    contactForm.invalid ||
-                    contactForm.pristine ||
-                    contactForm.get('name')?.pristine ||
-                    contactForm.get('tax_num')?.pristine ||
-                    contactForm.get('tel')?.pristine
-                  "
+                  [disabled]="contactForm.invalid || formClicked"
                 >
                   Küldés <i class="far fa-paper-plane"></i>
                 </button>

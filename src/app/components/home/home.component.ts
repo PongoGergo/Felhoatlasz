@@ -186,16 +186,15 @@ export class HomeComponent implements OnInit {
   formClicked = false;
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      companyName: [null, Validators.required, Validators.minLength(1)],
-      directorName: [null, Validators.required, Validators.minLength(1)],
+      companyName: [null, [Validators.required, Validators.minLength(1)]],
+      directorName: [null, [Validators.required, Validators.minLength(1)]],
       email: [null, [Validators.required, Validators.email]],
-      tel: [null, Validators.required, Validators.minLength(1)],
-      tax_num: [null, Validators.required, Validators.minLength(1)],
-      answer1: [null, Validators.required, Validators.minLength(1)],
-      answer2: [null, Validators.required, Validators.minLength(1)],
-      answer3: [null, Validators.required, Validators.minLength(1)],
-      answer4: [null, Validators.required, Validators.minLength(1)],
-      answer5: [null, Validators.required, Validators.minLength(1)],
+      tel: [null, [Validators.required, Validators.minLength(1)]],
+      tax_num: [null, [Validators.required, Validators.minLength(1)]],
+      answer1: [null, [Validators.required, Validators.minLength(1)]],
+      answer2: [null, [Validators.required, Validators.minLength(1)]],
+      answer3: [null, [Validators.required, Validators.minLength(1)]],
+      answer4: [null, [Validators.required, Validators.minLength(1)]],
     });
   }
 
@@ -213,6 +212,10 @@ export class HomeComponent implements OnInit {
           (response) => {
             this.showDialog = true;
             this.contactForm.reset();
+            this.contactForm.markAsUntouched();
+            this.contactForm.markAsPristine();
+            this.contactForm.updateValueAndValidity();
+            this.formClicked = false;
           },
           (error) => {}
         );
