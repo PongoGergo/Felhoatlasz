@@ -13,6 +13,8 @@ export class App {
   protected title = 'Felhőatlasz';
   mobileNavCollapse = true;
   isShow: boolean = false;
+  servicesDropdownOpen: boolean = false;
+  aboutDropdownOpen: boolean = false;
   topPosToStartShowing = 100;
 
   constructor() {}

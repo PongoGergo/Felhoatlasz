@@ -1120,7 +1120,7 @@ label {
     z-index: -1;
   }
 
-  .navbar .nav-item .dropdown-menu .dropdown-item:hover::before {
+  .navbar .nav-item .dropdown-menu .dropdown-item.show::before {
     opacity: 1;
     visibility: visible;
   }
@@ -1134,7 +1134,7 @@ label {
     color: #646464;
   }
 
-  .navbar .nav-item:hover .dropdown-menu {
+  .navbar .nav-item.show .dropdown-menu {
     transition: .3s;
     opacity: 1;
     visibility: visible;

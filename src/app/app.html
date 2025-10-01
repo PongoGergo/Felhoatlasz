@@ -64,15 +64,25 @@
             <!--<li class="nav-item">
               <a class="nav-link" (click)="gotoTop()" routerLink="/">Főoldal</a>
             </li>-->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            <li class="nav-item dropdown" [class.show]="servicesDropdownOpen">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                (click)="servicesDropdownOpen = !servicesDropdownOpen"
+                (mouseenter)="servicesDropdownOpen = true"
+                (mouseleave)="servicesDropdownOpen = false"
                 >Szolgáltatások</a
               >
-              <ul class="dropdown-menu fade-down">
+              <ul
+                class="dropdown-menu fade-down"
+                (mouseenter)="servicesDropdownOpen = true"
+                (mouseleave)="servicesDropdownOpen = false"
+                [class.show]="servicesDropdownOpen"
+              >
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="servicesDropdownOpen = false;gotoTop()"
                     routerLink="/szamvitel"
                     >Számviteli szolgáltatás</a
                   >
@@ -80,7 +90,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="servicesDropdownOpen = false;gotoTop()"
                     routerLink="/konyveles"
                     >Könyvelés</a
                   >
@@ -88,7 +98,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="servicesDropdownOpen = false;gotoTop()"
                     routerLink="/konyvvizsgalat"
                     >Könyvvizsgálat</a
                   >
@@ -96,7 +106,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="servicesDropdownOpen = false;gotoTop()"
                     routerLink="/adotanacsadas"
                     >Adótanácsadás</a
                   >
@@ -104,22 +114,32 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="servicesDropdownOpen = false;gotoTop()"
                     routerLink="/penzugyi"
                     >Pénzügyi tanácsadás</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+            <li class="nav-item dropdown" [class.show]="aboutDropdownOpen">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                (click)="aboutDropdownOpen = !aboutDropdownOpen"
+                (mouseenter)="aboutDropdownOpen = true"
+                (mouseleave)="aboutDropdownOpen = false"
                 >Rólunk</a
               >
-              <ul class="dropdown-menu fade-down">
+              <ul
+                class="dropdown-menu fade-down"
+                (mouseenter)="aboutDropdownOpen = true"
+                (mouseleave)="aboutDropdownOpen = false"
+                [class.show]="aboutDropdownOpen"
+              >
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="aboutDropdownOpen = false;gotoTop()"
                     routerLink="/about"
                     >Rólunk</a
                   >
@@ -127,13 +147,16 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="gotoTop()"
+                    (click)="aboutDropdownOpen = false;gotoTop()"
                     routerLink="/carrier"
                     >Karrier</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" (click)="gotoTop()" routerLink="/faq"
+                  <a
+                    class="dropdown-item"
+                    (click)="aboutDropdownOpen = false;gotoTop()"
+                    routerLink="/faq"
                     >GYIK</a
                   >
                 </li>
