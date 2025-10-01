@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">GYIK</li>
       </ul>
     </div>
@@ -34,8 +36,10 @@
             <p-accordion [value]="['0']" [multiple]="true">
               <p-accordion-panel value="0">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span>Miért érdemes a
-                  Felhőatlaszt választanom?
+                  <div>
+                    <span><i class="far fa-question"></i></span>Miért érdemes a
+                    Felhőatlaszt választanom?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>
@@ -50,8 +54,10 @@
               </p-accordion-panel>
               <p-accordion-panel value="1">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span> Milyen típusú
-                  vállalkozásoknak nyújtanak szolgáltatást?
+                  <div>
+                    <span><i class="far fa-question"></i></span> Milyen típusú
+                    vállalkozásoknak nyújtanak szolgáltatást?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>
@@ -66,8 +72,10 @@
               </p-accordion-panel>
               <p-accordion-panel value="2">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span>Milyen
-                  szolgáltatásokat kínál a Felhőatlasz?
+                  <div>
+                    <span><i class="far fa-question"></i></span>Milyen
+                    szolgáltatásokat kínál a Felhőatlasz?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>
@@ -81,8 +89,10 @@
               </p-accordion-panel>
               <p-accordion-panel value="3">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span> Hogyan működik az
-                  online könyvelés Önöknél?
+                  <div>
+                    <span><i class="far fa-question"></i></span> Hogyan működik
+                    az online könyvelés Önöknél?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>
@@ -97,8 +107,10 @@
               </p-accordion-panel>
               <p-accordion-panel value="4">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span>Mennyibe kerülnek
-                  a Felhőatlasz szolgáltatásai?
+                  <div>
+                    <span><i class="far fa-question"></i></span>Mennyibe
+                    kerülnek a Felhőatlasz szolgáltatásai?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>
@@ -113,8 +125,10 @@
               </p-accordion-panel>
               <p-accordion-panel value="5">
                 <p-accordion-header>
-                  <span><i class="far fa-question"></i></span>Mit kell tennem,
-                  ha szeretném Önökhöz áthelyezni a könyvelésemet?
+                  <div>
+                    <span><i class="far fa-question"></i></span>Mit kell tennem,
+                    ha szeretném Önökhöz áthelyezni a könyvelésemet?
+                  </div>
                 </p-accordion-header>
                 <p-accordion-content>
                   <p>

@@ -252,4 +252,12 @@ export class HomeComponent implements OnInit {
     return this.contactForm.get('answer5')!;
   }
   ngOnInit() {}
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 }

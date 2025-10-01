@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">Pénzügy</li>
       </ul>
     </div>
@@ -35,7 +37,7 @@
               >
               <img src="assets/img/course/01.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Cégalapítás és átalakulás</h4>
               <p>
                 Végigvezetjük a cégalapítás vagy cégének átalakítási folyamatán,
@@ -53,7 +55,7 @@
               >
               <img src="assets/img/course/02.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Üzleti tervezés és tanácsadás</h4>
               <p>
                 Segítünk üzleti tervek készítésében, pénzügyi modellek
@@ -71,7 +73,7 @@
               >
               <img src="assets/img/course/03.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Cash-flow menedzsment</h4>
               <p>
                 Elemezzük és optimalizáljuk cége pénzforgalmát, biztosítva a
@@ -88,7 +90,7 @@
               >
               <img src="assets/img/course/05.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Pénzügyi átvilágítás</h4>
               <p>
                 Átfogó pénzügyi átvilágítást végzünk cégvásárlások vagy

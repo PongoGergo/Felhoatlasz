@@ -41,4 +41,12 @@ export class AboutComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 }

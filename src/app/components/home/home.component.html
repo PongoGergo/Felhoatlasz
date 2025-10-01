@@ -29,10 +29,18 @@
                 az átláthatóság és a technológia kéz a kézben jár.
               </p>
               <div class="hero-btn" data-animation="fadeInUp" data-delay="1s">
-                <a routerLink="/about" class="theme-btn"
+                <a
+                  (click)="gotoTop()"
+                  (click)="gotoTop()"
+                  routerLink="/about"
+                  class="theme-btn"
                   >Rólunk<i class="fas fa-arrow-right-long"></i
                 ></a>
-                <a routerLink="/contact" class="theme-btn theme-btn2"
+                <a
+                  (click)="gotoTop()"
+                  (click)="gotoTop()"
+                  routerLink="/contact"
+                  class="theme-btn theme-btn2"
                   >Kapcsolat<i class="fas fa-arrow-right-long"></i
                 ></a>
               </div>
@@ -191,7 +199,11 @@
               </div>
             </div>
             <div class="about-bottom">
-              <a routerLink="/about" class="theme-btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/about"
+                class="theme-btn"
                 >Tudjon meg többet<i class="fas fa-arrow-right-long"></i
               ></a>
               <div class="about-phone">
@@ -224,9 +236,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100 +</span
               >
-              <h6 class="title">+ Aktív ügyfél</h6>
+              <h6 class="title">Aktív ügyfél</h6>
             </div>
           </div>
         </div>
@@ -241,9 +253,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100%</span
               >
-              <h6 class="title">% Ügyfél elégedetsség</h6>
+              <h6 class="title">Ügyfél elégedetsség</h6>
             </div>
           </div>
         </div>
@@ -258,9 +270,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100%</span
               >
-              <h6 class="title">% Digitális működés</h6>
+              <h6 class="title">Digitális működés</h6>
             </div>
           </div>
         </div>
@@ -296,11 +308,15 @@
                 ><i class="far fa-bookmark"></i> Számvitel</span
               >
               <img src="assets/img/course/01.jpg" alt="" />
-              <a routerLink="/szamvitel" class="btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/szamvitel"
+                class="btn"
                 ><i class="far fa-link"></i
               ></a>
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <div class="course-meta">
                 <div class="course-rating">
                   <i class="fas fa-star"></i>
@@ -308,7 +324,6 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                  <span>(4.0)</span>
                 </div>
               </div>
               <p class="course-text">
@@ -325,11 +340,15 @@
                 ><i class="far fa-bookmark"></i> Könyvelés</span
               >
               <img src="assets/img/course/02.jpg" alt="" />
-              <a routerLink="/konyveles" class="btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/konyveles"
+                class="btn"
                 ><i class="far fa-link"></i
               ></a>
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <div class="course-meta">
                 <div class="course-rating">
                   <i class="fas fa-star"></i>
@@ -337,7 +356,6 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                  <span>(4.0)</span>
                 </div>
               </div>
               <p class="course-text">
@@ -353,11 +371,15 @@
                 ><i class="far fa-bookmark"></i> Könyvvizsgálat</span
               >
               <img src="assets/img/course/03.jpg" alt="" />
-              <a routerLink="/konyvvizsgalat" class="btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/konyvvizsgalat"
+                class="btn"
                 ><i class="far fa-link"></i
               ></a>
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <div class="course-meta">
                 <div class="course-rating">
                   <i class="fas fa-star"></i>
@@ -365,7 +387,6 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                  <span>(4.0)</span>
                 </div>
               </div>
               <p class="course-text">
@@ -381,11 +402,15 @@
                 ><i class="far fa-bookmark"></i> Adótanácsadás</span
               >
               <img src="assets/img/course/04.jpg" alt="" />
-              <a routerLink="/adotanacsadas" class="btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/adotanacsadas"
+                class="btn"
                 ><i class="far fa-link"></i
               ></a>
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <div class="course-meta">
                 <div class="course-rating">
                   <i class="fas fa-star"></i>
@@ -393,7 +418,6 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                  <span>(4.0)</span>
                 </div>
               </div>
               <p class="course-text">
@@ -409,11 +433,15 @@
                 ><i class="far fa-bookmark"></i> Pénzügyek</span
               >
               <img src="assets/img/course/05.jpg" alt="" />
-              <a routerLink="/penzugyi" class="btn"
+              <a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/penzugyi"
+                class="btn"
                 ><i class="far fa-link"></i
               ></a>
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <div class="course-meta">
                 <div class="course-rating">
                   <i class="fas fa-star"></i>
@@ -421,7 +449,6 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
-                  <span>(4.0)</span>
                 </div>
               </div>
               <p class="course-text">
@@ -460,10 +487,10 @@
               <img src="assets/img/team/01.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -482,10 +509,10 @@
               <img src="assets/img/team/02.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -504,10 +531,10 @@
               <img src="assets/img/team/03.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -526,10 +553,10 @@
               <img src="assets/img/team/04.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
@@ -800,86 +827,101 @@
                       }
                     </div>
                   </div>
+                  <div class="col-md-6">
+                    <div class="form-group"></div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <p>Előző lezárt év árbevétele:</p>
+                      <p-inputgroup>
+                        <p-inputnumber
+                          mode="currency"
+                          currency="HUF"
+                          locale="hu-HU"
+                          name="answer1"
+                          formControlName="answer1"
+                          required
+                        ></p-inputnumber>
+                      </p-inputgroup>
+                      @if ((answer1.invalid && answer1.hasError('required') &&
+                      (answer1.dirty || answer1.touched)) || (formClicked &&
+                      (answer1.untouched || answer1.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >Az árbevétel mező kötelező!</p-message
+                      >
+                      }
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <p>
+                        1 naptári év alatt kiállított szállítói számlák
+                        darabszáma:
+                      </p>
+                      <p-inputgroup>
+                        <p-inputnumber
+                          name="answer2"
+                          locale="hu-HU"
+                          formControlName="answer2"
+                          required
+                        ></p-inputnumber>
+                        <p-inputgroup-addon>DB</p-inputgroup-addon>
+                      </p-inputgroup>
+                      @if ((answer2.invalid && answer2.hasError('required') &&
+                      (answer2.dirty || answer2.touched)) || (formClicked &&
+                      (answer2.untouched || answer2.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >Az szállítói számlák mező kötelező!</p-message
+                      >
+                      }
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <p>
+                        1 naptári év alatt kiállított vevői számlák darabszáma:
+                      </p>
+                      <p-inputgroup>
+                        <p-inputnumber
+                          name="answer3"
+                          locale="hu-HU"
+                          formControlName="answer3"
+                          required
+                        ></p-inputnumber>
+                        <p-inputgroup-addon>DB</p-inputgroup-addon>
+                      </p-inputgroup>
+                      @if ((answer3.invalid && answer3.hasError('required') &&
+                      (answer3.dirty || answer3.touched)) || (formClicked &&
+                      (answer3.untouched || answer3.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >Az vevői számlák mező kötelező!</p-message
+                      >
+                      }
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <p>Bankszámlák darabszáma</p>
+                      <p-inputgroup>
+                        <p-inputnumber
+                          name="answer4"
+                          locale="hu-HU"
+                          formControlName="answer4"
+                          required
+                        ></p-inputnumber>
+                        <p-inputgroup-addon>DB</p-inputgroup-addon>
+                      </p-inputgroup>
+                      @if ((answer4.invalid && answer4.hasError('required') &&
+                      (answer4.dirty || answer4.touched)) || (formClicked &&
+                      (answer4.untouched || answer4.pristine)) ) {
+                      <p-message severity="error" variant="simple" size="small"
+                        >Az bankszámlák mező kötelező!</p-message
+                      >
+                      }
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <p>Előző lezárt év árbevétele:</p>
-                  <p-inputgroup>
-                    <p-inputnumber
-                      mode="currency"
-                      currency="HUF"
-                      locale="hu-HU"
-                      name="answer1"
-                      formControlName="answer1"
-                      required
-                    ></p-inputnumber>
-                  </p-inputgroup>
-                  @if ((answer1.invalid && answer1.hasError('required') &&
-                  (answer1.dirty || answer1.touched)) || (formClicked &&
-                  (answer1.untouched || answer1.pristine)) ) {
-                  <p-message severity="error" variant="simple" size="small"
-                    >Az árbevétel mező kötelező!</p-message
-                  >
-                  }
-                </div>
-                <div class="form-group">
-                  <p>
-                    1 naptári év alatt kiállított szállítói számlák darabszáma:
-                  </p>
-                  <p-inputgroup>
-                    <p-inputnumber
-                      name="answer2"
-                      locale="hu-HU"
-                      formControlName="answer2"
-                      required
-                    ></p-inputnumber>
-                    <p-inputgroup-addon>DB</p-inputgroup-addon>
-                  </p-inputgroup>
-                  @if ((answer2.invalid && answer2.hasError('required') &&
-                  (answer2.dirty || answer2.touched)) || (formClicked &&
-                  (answer2.untouched || answer2.pristine)) ) {
-                  <p-message severity="error" variant="simple" size="small"
-                    >Az szállítói számlák mező kötelező!</p-message
-                  >
-                  }
-                </div>
-                <div class="form-group">
-                  <p>1 naptári év alatt kiállított vevői számlák darabszáma:</p>
-                  <p-inputgroup>
-                    <p-inputnumber
-                      name="answer3"
-                      locale="hu-HU"
-                      formControlName="answer3"
-                      required
-                    ></p-inputnumber>
-                    <p-inputgroup-addon>DB</p-inputgroup-addon>
-                  </p-inputgroup>
-                  @if ((answer3.invalid && answer3.hasError('required') &&
-                  (answer3.dirty || answer3.touched)) || (formClicked &&
-                  (answer3.untouched || answer3.pristine)) ) {
-                  <p-message severity="error" variant="simple" size="small"
-                    >Az vevői számlák mező kötelező!</p-message
-                  >
-                  }
-                </div>
-                <div class="form-group">
-                  <p>Bankszámlák darabszáma</p>
-                  <p-inputgroup>
-                    <p-inputnumber
-                      name="answer4"
-                      locale="hu-HU"
-                      formControlName="answer4"
-                      required
-                    ></p-inputnumber>
-                    <p-inputgroup-addon>DB</p-inputgroup-addon>
-                  </p-inputgroup>
-                  @if ((answer4.invalid && answer4.hasError('required') &&
-                  (answer4.dirty || answer4.touched)) || (formClicked &&
-                  (answer4.untouched || answer4.pristine)) ) {
-                  <p-message severity="error" variant="simple" size="small"
-                    >Az bankszámlák mező kötelező!</p-message
-                  >
-                  }
-                </div>
+
                 <!--<div class="form-group">
                   <p>Ötödik kérdés amire válaszol a felhasználó?</p>
                   <p-floatlabel class="mt-3">

@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">Dokumentumok</li>
       </ul>
     </div>

@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">Adótanácsadás</li>
       </ul>
     </div>
@@ -35,7 +37,7 @@
               >
               <img src="assets/img/course/01.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Adótervezés és -optimalizálás</h4>
               <p>
                 Segítünk optimalizálni cége adóterheit a hatályos jogszabályok
@@ -53,7 +55,7 @@
               >
               <img src="assets/img/course/04.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">ÁFA tanácsadás</h4>
               <p>
                 Szakértő tanácsokkal látjuk el az ÁFA-val kapcsolatos
@@ -71,7 +73,7 @@
               >
               <img src="assets/img/course/06.jpg" alt="" />
             </div>
-            <div class="course-content">
+            <div class="course-content mt-2">
               <h4 class="course-title">Adóhatósági ellenőrzések képviselete</h4>
               <p>
                 Képviseljük cégét az adóhatósági ellenőrzések során,

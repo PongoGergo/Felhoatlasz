@@ -78,4 +78,12 @@ export class ContactComponent implements OnInit {
     return this.contactForm.get('message')!;
   }
   ngOnInit() {}
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
 }

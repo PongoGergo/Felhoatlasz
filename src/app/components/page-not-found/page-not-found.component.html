@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">404 Error</li>
       </ul>
     </div>
@@ -26,7 +28,11 @@
             Az oldal amit keres nem találhatól, nem létezik vagy esetleg törölve
             lett.
           </p>
-          <a routerLink="/" class="theme-btn"
+          <a
+            (click)="gotoTop()"
+            (click)="gotoTop()"
+            routerLink="/"
+            class="theme-btn"
             >Vissza a Főoldalra <i class="far fa-home"></i
           ></a>
         </div>

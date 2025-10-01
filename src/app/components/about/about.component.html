@@ -6,7 +6,9 @@
   >
     <div class="container">
       <ul class="breadcrumb-menu">
-        <li><a routerLink="/">Főoldal</a></li>
+        <li>
+          <a (click)="gotoTop()" routerLink="/">Főoldal</a>
+        </li>
         <li class="active">Rólunk</li>
       </ul>
     </div>
@@ -14,6 +16,7 @@
   <!-- breadcrumb end -->
 
   <!-- counter area -->
+
   <div class="counter-area pt-60 pb-60">
     <div class="container">
       <div class="row">
@@ -28,9 +31,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100 +</span
               >
-              <h6 class="title">+ Aktív ügyfél</h6>
+              <h6 class="title">Aktív ügyfél</h6>
             </div>
           </div>
         </div>
@@ -45,9 +48,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100%</span
               >
-              <h6 class="title">% Ügyfél elégedetsség</h6>
+              <h6 class="title">Ügyfél elégedetsség</h6>
             </div>
           </div>
         </div>
@@ -62,9 +65,9 @@
                 data-count="+"
                 data-to="100"
                 data-speed="3000"
-                >100</span
+                >100%</span
               >
-              <h6 class="title">% Digitális működés</h6>
+              <h6 class="title">Digitális működés</h6>
             </div>
           </div>
         </div>
@@ -159,9 +162,13 @@
               </div>
             </div>
             <div class="about-bottom">
-              <a routerLink="/about" class="theme-btn"
+              <!--<a
+                (click)="gotoTop()"
+                (click)="gotoTop()"
+                routerLink="/about"
+                class="theme-btn"
                 >Tudjon meg többet<i class="fas fa-arrow-right-long"></i
-              ></a>
+              ></a>-->
               <div class="about-phone">
                 <div class="icon"><i class="fal fa-headset"></i></div>
                 <div class="number">
@@ -366,14 +373,14 @@
               <img src="assets/img/team/01.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
-                <h5><a routerLink="/">Angela T. Vigil</a></h5>
+                <h5><a (click)="gotoTop()" routerLink="/">Angela T. Vigil</a></h5>
                 <span>Associate Professor</span>
               </div>
             </div>
@@ -388,14 +395,14 @@
               <img src="assets/img/team/02.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
-                <h5><a routerLink="/">Frank A. Mitchell</a></h5>
+                <h5><a (click)="gotoTop()" routerLink="/">Frank A. Mitchell</a></h5>
                 <span>Associate Professor</span>
               </div>
             </div>
@@ -410,14 +417,14 @@
               <img src="assets/img/team/03.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
-                <h5><a routerLink="/">Susan D. Lunsford</a></h5>
+                <h5><a (click)="gotoTop()" routerLink="/">Susan D. Lunsford</a></h5>
                 <span>CEO & Founder</span>
               </div>
             </div>
@@ -432,14 +439,14 @@
               <img src="assets/img/team/04.jpg" alt="thumb" />
             </div>
             <div class="team-social">
-              <a routerLink="/"><i class="fab fa-facebook-f"></i></a>
-              <a routerLink="/"><i class="fab fa-whatsapp"></i></a>
-              <a routerLink="/"><i class="fab fa-linkedin-in"></i></a>
-              <a routerLink="/"><i class="fab fa-youtube"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-facebook-f"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-whatsapp"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-linkedin-in"></i></a>
+              <a (click)="gotoTop()" routerLink="/"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="team-content">
               <div class="team-bio">
-                <h5><a routerLink="/">Dennis A. Pruitt</a></h5>
+                <h5><a (click)="gotoTop()" routerLink="/">Dennis A. Pruitt</a></h5>
                 <span>Associate Professor</span>
               </div>
             </div>

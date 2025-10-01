@@ -1240,9 +1240,7 @@ label {
   }
 
   .navbar-collapse {
-    max-height: 220px;
-    overflow: hidden;
-    overflow-y: auto;
+    overflow: visible;
     padding: 0 20px;
     background-color: #ffffff;
   }
@@ -1840,6 +1838,12 @@ label {
 .about-left{
   margin-right: 20px;
 }
+@media (max-width: 991px) {
+  .about-left{
+    display: none;;
+  }
+
+}
 
 .about-img{
   display: flex;
@@ -2018,6 +2022,9 @@ label {
 
 .course-area{
   position: relative;
+  .col-md-6.col-lg-4{
+    margin-bottom: 25px;
+  }
 }
 
 .course-item{
@@ -2025,8 +2032,8 @@ label {
   background: #ffffff;
   padding: 20px;
   border-radius: 50px 50px 50px 0;
-  margin-bottom: 25px;
   box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+  min-height: 100%;
 }
 
 .course-tag{
@@ -2301,6 +2308,7 @@ label {
   border-radius: 50px 50px 50px 0px;
   box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
   z-index: 1;
+  min-height: 100%;
 }
 
 .feature-item .count{
@@ -2605,7 +2613,7 @@ label {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(assets/img/shape/01.png);
+  background-image: url(/assets/img/shape/01.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2723,7 +2731,7 @@ label {
 }
 
 .ts-bg{
-  background-image: url(assets/img/testimonial/bg.jpg);
+  background-image: url(/assets/img/testimonial/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2842,7 +2850,7 @@ label {
 
 .counter-area {
   position: relative;
-  background-image: url(assets/img/counter/01.jpg);
+  background-image: url(/assets/img/counter/01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2940,7 +2948,7 @@ label {
 
 .cta-area{
   position: relative;
-  background-image: url(assets/img/cta/01.jpg);
+  background-image: url(/assets/img/cta/01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -3202,7 +3210,7 @@ label {
 
 .enroll-area{
   position: relative;
-  background-image: url(assets/img/enroll/01.jpg);
+  background-image: url(/assets/img/enroll/01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4107,8 +4115,13 @@ label {
   color:  #19232B;
 }
 
-.contact-form .form-group {
-  margin-bottom: 25px;
+.contact-form .form-group p-floatlabel {
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
 }
 
 .contact-form .form-group .form-control {
@@ -4120,6 +4133,21 @@ label {
 
 .contact-form .form-group .form-control:focus {
   border-color: #04baf9;
+}
+
+.col-md-6 .form-group {
+  min-height: 75px;
+}
+.col-md-12 .form-group {
+  min-height: 260px;
+  textarea{
+    max-height: 220px;
+    height: 220px;
+    resize: none;
+  }
+}
+.col-lg-6 .form-group {
+  min-height: 100px;
 }
 
 .contact-map {
@@ -4148,6 +4176,7 @@ label {
   background:#ffffff;
   box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
   transition: all .5s ease-in-out;
+  min-height: 100%;
 }
 
 .contact-info::before{
@@ -4637,6 +4666,13 @@ label {
   background: #646464;
   text-align: center;
   color: #ffffff;
+  margin-right: 2rem;
+}
+.faq-area p-accordion-header div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start;
 }
 
 .faq-area .accordion-button:not(.collapsed) {
@@ -4767,7 +4803,7 @@ label {
 
 @media (max-width: 991px) {
   .site-breadcrumb {
-    padding-top: 230px;
+    padding-top: 70px;
   }
 }
 
@@ -6468,7 +6504,7 @@ label {
 
 .home-3 .footer-area{
   position: relative;
-  background-image: url(assets/img/footer/01.jpg);
+  background-image: url(/assets/img/footer/01.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
