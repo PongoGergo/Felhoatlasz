@@ -64,25 +64,29 @@
             <!--<li class="nav-item">
               <a class="nav-link" (click)="gotoTop()" routerLink="/">Főoldal</a>
             </li>-->
-            <li class="nav-item dropdown" [class.show]="servicesDropdownOpen">
+            <li
+              class="nav-item dropdown"
+              [class.show]="servicesDropdownOpen"
+              (click)="onClick('services')"
+              (mouseenter)="onMouseEnter('services')"
+              (mouseleave)="onMouseLeave('services')"
+            >
               <a
                 class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                (click)="servicesDropdownOpen = !servicesDropdownOpen"
-                (mouseenter)="servicesDropdownOpen = true"
-                (mouseleave)="servicesDropdownOpen = false"
+                (mouseenter)="onMouseEnter('services')"
+                (mouseleave)="onMouseLeave('services')"
                 >Szolgáltatások</a
               >
               <ul
                 class="dropdown-menu fade-down"
-                (mouseenter)="servicesDropdownOpen = true"
-                (mouseleave)="servicesDropdownOpen = false"
                 [class.show]="servicesDropdownOpen"
+                (mouseenter)="onMouseEnter('services')"
+                (mouseleave)="onMouseLeave('services')"
               >
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="servicesDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/szamvitel"
                     >Számviteli szolgáltatás</a
                   >
@@ -90,7 +94,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="servicesDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/konyveles"
                     >Könyvelés</a
                   >
@@ -98,7 +102,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="servicesDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/konyvvizsgalat"
                     >Könyvvizsgálat</a
                   >
@@ -106,7 +110,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="servicesDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/adotanacsadas"
                     >Adótanácsadás</a
                   >
@@ -114,32 +118,37 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="servicesDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/penzugyi"
                     >Pénzügyi tanácsadás</a
                   >
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown" [class.show]="aboutDropdownOpen">
+            <li
+              class="nav-item dropdown"
+              [class.show]="aboutDropdownOpen"
+              (click)="onClick('about')"
+              (mouseenter)="onMouseEnter('about')"
+              (mouseleave)="onMouseLeave('about')"
+            >
               <a
                 class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                (click)="aboutDropdownOpen = !aboutDropdownOpen"
-                (mouseenter)="aboutDropdownOpen = true"
-                (mouseleave)="aboutDropdownOpen = false"
+                (mouseenter)="onMouseEnter('about')"
+                (mouseleave)="onMouseLeave('about')"
                 >Rólunk</a
               >
               <ul
                 class="dropdown-menu fade-down"
-                (mouseenter)="aboutDropdownOpen = true"
-                (mouseleave)="aboutDropdownOpen = false"
                 [class.show]="aboutDropdownOpen"
+                (mouseenter)="onMouseEnter('about')"
+                (mouseleave)="onMouseLeave('about')"
+                y
               >
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="aboutDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/about"
                     >Rólunk</a
                   >
@@ -147,7 +156,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="aboutDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/carrier"
                     >Karrier</a
                   >
@@ -155,7 +164,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    (click)="aboutDropdownOpen = false;gotoTop()"
+                    (click)="gotoTop();collapseAll();"
                     routerLink="/faq"
                     >GYIK</a
                   >
@@ -168,7 +177,10 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" (click)="gotoTop()" routerLink="/contact"
+              <a
+                class="nav-link"
+                (click)="gotoTop();mobileNavCollapse = true"
+                routerLink="/contact"
                 >Kapcsolat</a
               >
             </li>

@@ -16,6 +16,8 @@ export class App {
   servicesDropdownOpen: boolean = false;
   aboutDropdownOpen: boolean = false;
   topPosToStartShowing = 100;
+  closeServicesTimeout: any = null;
+  closeAboutTimeout: any = null;
 
   constructor() {}
 
@@ -47,5 +49,49 @@ export class App {
       left: 0,
       behavior: 'smooth',
     });
+  }
+
+  onMouseEnter(type: 'services' | 'about') {
+    if (type === 'services') {
+      this.servicesDropdownOpen = true;
+      if (this.closeServicesTimeout) {
+        clearTimeout(this.closeServicesTimeout);
+        this.closeServicesTimeout = null;
+      }
+    } else if (type === 'about') {
+      this.aboutDropdownOpen = true;
+      if (this.closeAboutTimeout) {
+        clearTimeout(this.closeAboutTimeout);
+        this.closeAboutTimeout = null;
+      }
+    }
+  }
+
+  onClick(type: 'services' | 'about') {
+    if (type === 'services') {
+      this.servicesDropdownOpen = !this.servicesDropdownOpen;
+    } else if (type === 'about') {
+      this.aboutDropdownOpen = !this.aboutDropdownOpen;
+    }
+  }
+
+  onMouseLeave(type: 'services' | 'about') {
+    if (type === 'services') {
+      this.closeServicesTimeout = setTimeout(() => {
+        this.servicesDropdownOpen = false;
+        this.closeServicesTimeout = null;
+      }, 200);
+    } else if (type === 'about') {
+      this.closeAboutTimeout = setTimeout(() => {
+        this.aboutDropdownOpen = false;
+        this.closeAboutTimeout = null;
+      }, 200);
+    }
+  }
+
+  collapseAll() {
+    this.servicesDropdownOpen = false;
+    this.aboutDropdownOpen = false;
+    this.mobileNavCollapse = true;
   }
 }

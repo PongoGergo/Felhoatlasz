@@ -194,6 +194,12 @@ li {
 
 .course-content li {
   list-style: disc;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.course-content ul {
+  padding: 0 1rem;
 }
 
 
@@ -4136,8 +4142,14 @@ label {
   border-color: #04baf9;
 }
 
+@media (max-width:991px) {
+  .remove-mobile{
+    display: none;
+  }
+}
+
 .col-md-6 .form-group {
-  min-height: 100px;
+  min-height: 90px;
 }
 .col-md-12 .form-group {
   min-height: 260px;
@@ -4162,6 +4174,10 @@ label {
 
 .contact-content {
   margin-bottom: 50px;
+}
+
+.contact-content .col-md-4{
+  margin-bottom: 2rem;
 }
 
 .contact-info {
