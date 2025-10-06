@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -18,6 +18,8 @@ import emailjs from '@emailjs/browser'; // Assuming you're using EmailJS
 import { ButtonModule } from 'primeng/button';
 import { DialogModule } from 'primeng/dialog';
 import { MessageModule } from 'primeng/message';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -36,6 +38,8 @@ import { MessageModule } from 'primeng/message';
     DialogModule,
     ButtonModule,
     MessageModule,
+    ProgressSpinnerModule,
+    CommonModule,
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
@@ -184,7 +188,13 @@ export class HomeComponent implements OnInit {
   contactForm: FormGroup;
   showDialog = false;
   formClicked = false;
-  constructor(private fb: FormBuilder) {
+  private isBrowser: boolean;
+
+  constructor(
+    private fb: FormBuilder,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
     this.contactForm = this.fb.group({
       companyName: [null, [Validators.required, Validators.minLength(1)]],
       directorName: [null, [Validators.required, Validators.minLength(1)]],
@@ -201,6 +211,10 @@ export class HomeComponent implements OnInit {
   public sendEmail() {
     this.formClicked = true;
     if (this.contactForm.valid) {
+      if (this.isBrowser) {
+        const root = document.querySelector('app-root');
+        if (root) root.classList.add('no-scroll');
+      }
       emailjs
         .send(
           'service_ei0exzo', // Replace with your EmailJS Service ID
@@ -222,6 +236,35 @@ export class HomeComponent implements OnInit {
     } else {
       this.contactForm.updateValueAndValidity();
     }
+  }
+  private scrollY = 0;
+
+  onDialogShow() {
+    if (!this.isBrowser) return;
+
+    if (this.isBrowser) {
+      const root = document.querySelector('app-root');
+      if (root) root.classList.remove('no-scroll');
+    }
+    // Lock scroll and preserve current scroll position
+    this.scrollY = window.scrollY || document.documentElement.scrollTop;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${this.scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  }
+
+  onDialogHide() {
+    if (!this.isBrowser) return;
+
+    // Unlock scroll and restore position
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    window.scrollTo(0, this.scrollY);
   }
 
   get companyName() {

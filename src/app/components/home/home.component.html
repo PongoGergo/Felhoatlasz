@@ -947,7 +947,16 @@
                   class="theme-btn"
                   [disabled]="contactForm.invalid || formClicked"
                 >
-                  Küldés <i class="far fa-paper-plane"></i>
+                  <p-progress-spinner
+                    *ngIf="formClicked"
+                    strokeWidth="8"
+                    fill="transparent"
+                    animationDuration=".5s"
+                    [style]="{ width: '15px', height: '15px' }"
+                  />
+                  <span *ngIf="!formClicked"
+                    >Küldés <i class="far fa-paper-plane"></i
+                  ></span>
                 </button>
                 <div class="col-md-12 mt-3">
                   <div class="form-messege text-success"></div>
@@ -1055,7 +1064,10 @@
   header="Sikeres kapcsolat felvétel"
   [modal]="true"
   [(visible)]="showDialog"
+  [blockScroll]="true"
   [style]="{ width: '25rem' }"
+  (onHide)="onDialogHide()"
+  (onShow)="onDialogShow()"
 >
   <p>
     Köszönjük, hogy felvette velünk a kapcsolatot, munkatársunk hamarosan

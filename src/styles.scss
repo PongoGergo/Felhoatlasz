@@ -1067,6 +1067,7 @@ label {
     font-weight: 600;
     color:  #19232B;
     text-transform: capitalize;
+    cursor: pointer;
   }
 
   .navbar .nav-item:last-child .nav-link {
@@ -6559,4 +6560,8 @@ label {
   transition: all .5s ease-in-out;
   opacity: 1;
   visibility: visible;
+}
+
+app-root.no-scroll {
+  overflow: hidden !important;
 }

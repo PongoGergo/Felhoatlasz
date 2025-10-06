@@ -1,6 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +19,22 @@ export class App {
   topPosToStartShowing = 100;
   closeServicesTimeout: any = null;
   closeAboutTimeout: any = null;
+  private isBrowser: boolean;
+  isLargeScreen = true; // default assumption
 
-  constructor() {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    @Inject(PLATFORM_ID) platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+    if (this.isBrowser) {
+      this.breakpointObserver
+        .observe(['(min-width: 991px)'])
+        .subscribe((result: any) => {
+          this.isLargeScreen = result.matches;
+        });
+    }
+  }
 
   toggleNavBar() {
     this.mobileNavCollapse = !this.mobileNavCollapse;
@@ -52,6 +67,8 @@ export class App {
   }
 
   onMouseEnter(type: 'services' | 'about') {
+    if (!this.isLargeScreen) return;
+
     if (type === 'services') {
       this.servicesDropdownOpen = true;
       if (this.closeServicesTimeout) {
@@ -76,6 +93,8 @@ export class App {
   }
 
   onMouseLeave(type: 'services' | 'about') {
+    if (!this.isLargeScreen) return;
+
     if (type === 'services') {
       this.closeServicesTimeout = setTimeout(() => {
         this.servicesDropdownOpen = false;
