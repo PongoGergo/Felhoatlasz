@@ -4168,6 +4168,12 @@ label {
   min-height: 75px;
 }
 
+@media (min-width:991px) {
+  .form-group.first{
+    min-height: 75px;
+  }
+}
+
 .contact-map {
   margin-bottom: -9px;
 }
